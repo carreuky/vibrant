@@ -13,7 +13,7 @@ export default function Footer() {
             Copyright © 2022. All rights reserved.
           </div>
           <div className="col-md-4 col-xs-12 text-white">
-            Designed by Carreucky
+            Designed by Carreuky
           </div>
           <div className="col-md-4 col-xs-12">
             <p className="flex justify-center items-center">

@@ -5,8 +5,9 @@ export default function SignUp() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
+  const[imerudi, setImerudi]=useState()
 
-  const user = { username, password, passwordConfirmation };
+  const userToDB = { username, password, passwordConfirmation };
   const colorTxt = {
     color: "#0D7CAC",
     textDecoration: "none",
@@ -15,23 +16,25 @@ export default function SignUp() {
   function handleSubmit() {
     console.log("radaa");
   }
-  console.log(username + password);
+  console.log(userToDB);
+  console.log(imerudi)
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(user);
+    console.log(userToDB);
 
-    // fetch("/signup", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(user),
-    // }).then((r) => {
-    //   if (r.ok) {
-    //     r.json().then((user) => setUser(user));
-    //   }
-    // });
+    fetch("/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userToDB),
+    })
+    .then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setImerudi(user));
+      }
+    });
   }
   return (
     <div>
