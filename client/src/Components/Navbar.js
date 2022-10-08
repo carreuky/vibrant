@@ -64,8 +64,8 @@ export default function Navbar({ user, setUser }) {
                     className="nav-link bg-primary text-white px-4 rounded"
                     style={{
                       backgroundColor: "#0D7CAC",
-                      fontSize: "18px",
-                      fontWeight: "600",
+                      fontSize: "15px",
+                      fontWeight: "300",
                       color: "white",
                       // padding: "9px 40px",
                     }}
@@ -110,8 +110,8 @@ export default function Navbar({ user, setUser }) {
                       style={{
                         backgroundColor: "#0D7CAC",
                         fontSize: "18px",
-                        fontWeight: "600",
-                        padding: "9px 40px",
+                        fontWeight: "300",
+                        padding: "7px 38px",
                       }}
                     >
                       Post Event

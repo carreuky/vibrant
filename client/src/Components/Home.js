@@ -12,7 +12,7 @@ export default function Home() {
   };
   return (
     <div>
-      <div className="container-fluid my-3  p-5 ">
+      <div className="container-fluid my-1  p-5 ">
         <div className="row">
           <div className="col-12 col-lg-6 pt-3">
             <div className="mb-3">
@@ -41,7 +41,7 @@ export default function Home() {
                   border: "none",
                   color: "white",
                   backgroundColor: "#0D7CAC",
-                  fontSize: "18px",
+                  fontSize: "15px",
                   fontWeight: "900",
                 }}
               >
