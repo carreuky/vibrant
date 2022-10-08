@@ -8,14 +8,14 @@ export default function Login() {
   return (
     <div>
         <section className="vh-60 m-5">
-        <h3 style={{fontWeight:'300'}} className="text-center"></h3>
+        {/* <h3 style={{fontWeight:'300'}} className="text-center"></h3> */}
         <div className="container-fluid h-custom">
           <div className="row d-flex justify-content-center align-items-center h-80">
             <div className="col-md-9 col-lg-6 col-xl-5">
               <img
                 src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
                 className="img-fluid"
-                alt="Sample image"
+                alt="Sample"
               />
             </div>
             <div className="col-md-8 col-lg-6 col-xl-4 pl-0 py-4 offset-xl-1">

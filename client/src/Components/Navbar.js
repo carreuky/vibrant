@@ -10,47 +10,46 @@ export default function Navbar() {
   };
   return (
     <div>
-      <nav class="navbar navbar-expand-lg  navbar-light">
-        <div class="container-fluid">
-          <a
-            href="#"
-            class="navbar-brand "
+      <nav className="navbar navbar-expand-lg  navbar-light">
+        <div className="container-fluid">
+          <p
+            className="navbar-brand "
             style={{ fontSize: "35px", color: "#0D7CAC", fontWeight: "300" }}
           >
             Vibrant
-          </a>
+          </p>
 
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navmenu"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse text-center w-25" id="navmenu">
-            <ul class="navbar-nav ms-auto">
-            <li class="nav-item  mx-3">
-                <a href="#products" class="nav-link" style={colorTxt}>
+          <div className="collapse navbar-collapse text-center w-25" id="navmenu">
+            <ul className="navbar-nav ms-auto">
+            <li className="nav-item  mx-3">
+                <a href="#products" className="nav-link" style={colorTxt}>
                  <Link to='/' style={{textDecoration: 'none'}}>Home </Link>
                 </a>
               </li>
-              <li class="nav-item  mx-3">
-                <a href="#products" class="nav-link" style={colorTxt}>
+              <li className="nav-item  mx-3">
+                <a href="#products" className="nav-link" style={colorTxt}>
                 <Link to='/events' style={{textDecoration: 'none'}}>Events</Link>
                 </a>
               </li>
-              <li class="nav-item mx-3">
-                <a href="#services" class="nav-link" style={colorTxt}>
+              <li className="nav-item mx-3">
+                <a href="#services" className="nav-link" style={colorTxt}>
                 <Link to='/login' style={{textDecoration: 'none'}}>Login</Link>
                 </a>
               </li>
-              <li class="nav-item mx-2">
+              <li className="nav-item mx-2">
               <Link to='/signup' style={{textDecoration: 'none'}}>
                 <a
                   href="#contact"
-                  class="nav-link bg-primary text-white px-4 rounded"
+                  className="nav-link bg-primary text-white px-4 rounded"
                   style={{
                     backgroundColor: "#0D7CAC",
                     fontSize: "18px",

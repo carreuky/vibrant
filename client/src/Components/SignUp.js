@@ -16,7 +16,7 @@ export default function SignUp() {
               <img
                 src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
                 className="img-fluid"
-                alt="Sample image"
+                alt="Sample"
               />
             </div>
             <div className="col-md-8 col-lg-6 col-xl-4 pl-0 py-4 offset-xl-1">
@@ -65,7 +65,7 @@ export default function SignUp() {
                 <div className="text-center text-lg-start">
                   <button
                     type="button"
-                    className="btn btn-primary btn-lg"
+                    className="btn btn-lg"
                     style={{
                     border: 'none',
                       paddingLeft: "2.5rem;",

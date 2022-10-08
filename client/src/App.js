@@ -5,6 +5,7 @@ import SignUp from "./Components/SignUp";
 import Login from "./Components/Login";
 import Home from "./Components/Home";
 import Events from "./Components/Events";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Home />
         </Route>
       </Switch>
+      <Footer/>
     </div>
   );
 }
