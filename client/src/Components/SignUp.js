@@ -9,7 +9,12 @@ export default function SignUp() {
   return (
     <div>
       <section className="vh-60 m-5">
-        <h3 style={{fontWeight:'300'}} className="text-center">CREATE AN ACCOUNT TO POST AN EVENT</h3>
+        <h3
+          style={{ fontWeight: "400", color: "#0D7CAC" }}
+          className="text-center"
+        >
+          CREATE AN ACCOUNT TO POST AN EVENT
+        </h3>
         <div className="container-fluid h-custom">
           <div className="row d-flex justify-content-center align-items-center h-80">
             <div className="col-md-9 col-lg-6 col-xl-5">
@@ -65,9 +70,9 @@ export default function SignUp() {
                 <div className="text-center text-lg-start">
                   <button
                     type="button"
-                    className="btn btn-lg"
+                    className="btn btn-lg text-white"
                     style={{
-                    border: 'none',
+                      border: "none",
                       paddingLeft: "2.5rem;",
                       paddingRight: "2.5rem",
                       backgroundColor: "#0D7CAC",

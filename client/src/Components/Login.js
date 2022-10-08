@@ -1,13 +1,13 @@
-import React from 'react'
-import {Link} from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 export default function Login() {
-    const colorTxt = {
-        color: "#0D7CAC",
-        textDecoration: "none",
-      };
+  const colorTxt = {
+    color: "#0D7CAC",
+    textDecoration: "none",
+  };
   return (
     <div>
-        <section className="vh-60 m-5">
+      <section className="vh-60 m-5">
         {/* <h3 style={{fontWeight:'300'}} className="text-center"></h3> */}
         <div className="container-fluid h-custom">
           <div className="row d-flex justify-content-center align-items-center h-80">
@@ -22,7 +22,7 @@ export default function Login() {
               <form>
                 <div className="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
                   <p className="lead fw-normal mb-3  me-2">
-                    REGISTER {" "}
+                    REGISTER{" "}
                     <span>
                       <Link style={colorTxt} to="/signup">
                         SIGN UP
@@ -57,7 +57,7 @@ export default function Login() {
                     type="button"
                     className="btn btn-primary btn-lg"
                     style={{
-                    border: 'none',
+                      border: "none",
                       paddingLeft: "2.5rem;",
                       paddingRight: "2.5rem",
                       backgroundColor: "#0D7CAC",
@@ -75,5 +75,5 @@ export default function Login() {
         </div>
       </section>
     </div>
-  )
+  );
 }
