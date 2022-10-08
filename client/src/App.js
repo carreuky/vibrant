@@ -8,10 +8,13 @@ import Events from "./Components/Events";
 import Footer from "./Components/Footer";
 
 function App() {
+  const [user, setUser] = useState(null);
+
+
   return (
     <div className="App">
       <Navbar />
-      <Switch>
+      {user ? null :<Switch>
         <Route path="/signup">
           <SignUp/>
         </Route>
@@ -24,7 +27,8 @@ function App() {
         <Route path="/">
           <Home />
         </Route>
-      </Switch>
+      </Switch>}
+      
       <Footer/>
     </div>
   );
