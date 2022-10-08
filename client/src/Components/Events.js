@@ -24,8 +24,6 @@ export default function Events() {
                 <div className="d-flex justify-content-between ">
                 <a href="#" className="btn btn-primary"  style={{
                       backgroundColor: "#0D7CAC",
-                      fontSize: "18px",
-                      fontWeight: "600",
                     }}>
                   Book{" "}
                 </a>

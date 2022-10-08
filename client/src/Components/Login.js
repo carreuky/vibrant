@@ -63,7 +63,7 @@ export default function Login() {
                       backgroundColor: "#0D7CAC",
                       fontSize: "18px",
                       fontWeight: "600",
-                      padding: "9px 40px",
+                      padding: "5px 40px",
                     }}
                   >
                     Login
