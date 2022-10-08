@@ -6,6 +6,7 @@ import Login from "./Components/Login";
 import Home from "./Components/Home";
 import Events from "./Components/Events";
 import Footer from "./Components/Footer";
+import Userpage from "./Components/Userpage";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -22,7 +23,11 @@ function App() {
   return (
     <div className="App">
       <Navbar user={user} setUser={setUser} />
-      {user ? null :<Switch>
+      {user ? <Switch>
+        <Route path='/'>
+          <Userpage user={user}/>
+        </Route>
+      </Switch> :<Switch>
         <Route path="/signup">
           <SignUp/>
         </Route>

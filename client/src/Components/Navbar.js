@@ -11,12 +11,13 @@ export default function Navbar({ user, setUser }) {
   };
 
   function logOut() {
-    console.log('dsds')
-    // fetch("/logout", { method: "DELETE" }).then((r) => {
-    //   if (r.ok) {
-    //     setUser(null);
-    //   }
-    // });
+    console.log("dsds");
+    fetch("/logout", { method: "DELETE" }).then((r) => {
+      if (r.ok) {
+        setUser(null);
+        window.location.reload();
+      }
+    });
   }
   return (
     <div>
@@ -50,27 +51,32 @@ export default function Navbar({ user, setUser }) {
             {user ? (
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item  mx-3">
-                  <a href="#products" className="nav-link" style={colorTxt}>
+                  <a href="" className="nav-link" style={colorTxt}>
                     <span style={{ textDecoration: "none" }}>
-                      {user.username}
+                      {user.username.toUpperCase()}
                     </span>
                   </a>
                 </li>
                 <li className="nav-item  mx-3">
-                  <button
-                  onClick={logOut}
-                    href="#contact"
+                  <a
+                    onClick={logOut}
+                    href="/"
                     className="nav-link bg-primary text-white px-4 rounded"
                     style={{
                       backgroundColor: "#0D7CAC",
                       fontSize: "18px",
                       fontWeight: "600",
-                      border: "none",
+                      color: "white",
                       // padding: "9px 40px",
                     }}
                   >
-                    Log Out
-                  </button>
+                    <Link
+                      to="/"
+                      style={{ textDecoration: "none", color: "white" }}
+                    >
+                      Log Out
+                    </Link>
+                  </a>
                 </li>
               </ul>
             ) : (
