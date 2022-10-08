@@ -519,3 +519,23 @@ Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-08 22:20:11 +0
   
 ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
   
+Started POST "/login" for 127.0.0.1 at 2022-10-08 22:21:23 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"kuja", "password"=>"[FILTERED]", "session"=>{"username"=>"kuja", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kuja"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 401 Unauthorized in 11ms (Views: 1.2ms | ActiveRecord: 3.5ms | Allocations: 1582)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/login" for 127.0.0.1 at 2022-10-08 22:23:06 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"jomba", "password"=>"[FILTERED]", "session"=>{"username"=>"jomba", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jomba"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.32ms)
+Completed 200 OK in 386ms (Views: 1.1ms | ActiveRecord: 5.5ms | Allocations: 3306)
+
+
