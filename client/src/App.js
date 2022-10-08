@@ -21,7 +21,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <Navbar />
+      <Navbar user={user} setUser={setUser} />
       {user ? null :<Switch>
         <Route path="/signup">
           <SignUp/>
