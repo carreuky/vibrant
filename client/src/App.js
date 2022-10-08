@@ -1,4 +1,4 @@
-import "./App.css";
+import React, { useState ,useEffect } from "react";
 import Navbar from "./Components/Navbar";
 import { Switch, Route } from "react-router-dom";
 import SignUp from "./Components/SignUp";
@@ -9,6 +9,7 @@ import Footer from "./Components/Footer";
 
 function App() {
   const [user, setUser] = useState(null);
+  console.log(user)
 
   useEffect(() => {
     // auto-login

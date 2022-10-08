@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useState ,useEffect } from "react";
 import { Link } from "react-router-dom";
 export default function Login() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const colorTxt = {
     color: "#0D7CAC",
     textDecoration: "none",
   };
+
+  const loginDetails={username,password}
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch("/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(loginDetails),
+    }).then((r) => {
+      if (r.ok) {
+        r.json().then((user) =>console.log(user));
+      }
+    });
+  }
   return (
     <div>
       <section className="vh-60 m-5">
@@ -37,10 +55,12 @@ export default function Login() {
 
                 <div className="form-outline mb-3 ">
                   <input
-                    type="email"
+                    type="text"
                     id="form3Example3"
                     className="form-control form-control-lg "
                     placeholder="username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
                   />
                 </div>
 
@@ -50,10 +70,13 @@ export default function Login() {
                     id="form3Example4"
                     className="form-control form-control-lg"
                     placeholder="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
                 <div className="text-center text-lg-start">
                   <button
+                  onClick={handleSubmit}
                     type="button"
                     className="btn btn-primary btn-lg"
                     style={{

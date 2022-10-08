@@ -22,11 +22,11 @@ export default function Events() {
                   content.
                 </p>
                 <div className="d-flex justify-content-between ">
-                <a href="#" className="btn btn-primary"  style={{
+                <button href="" className="btn btn-primary"  style={{
                       backgroundColor: "#0D7CAC",
                     }}>
                   Book{" "}
-                </a>
+                </button>
                 <p className ="">KSH 250</p>
                 </div>
                
@@ -41,9 +41,9 @@ export default function Events() {
                   With supporting text below as a natural lead-in to additional
                   content.
                 </p>
-                <a href="#" className="btn btn-primary">
+                <button href="" className="btn btn-primary">
                   Book{" "}
-                </a>
+                </button>
               </div>
             </div>
           </div>

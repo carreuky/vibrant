@@ -396,3 +396,126 @@ Started GET "/logo192.png" for 127.0.0.1 at 2022-10-08 19:16:04 +0300
   
 ActionController::RoutingError (No route matches [GET] "/logo192.png"):
   
+Started GET "/logo192.png" for 127.0.0.1 at 2022-10-08 21:08:26 +0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/logo192.png"):
+  
+Started GET "/me" for 127.0.0.1 at 2022-10-08 21:09:16 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.16ms)
+Completed 200 OK in 147ms (Views: 117.4ms | ActiveRecord: 2.8ms | Allocations: 5871)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-08 21:09:22 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.11ms)
+Completed 200 OK in 7ms (Views: 1.0ms | ActiveRecord: 0.4ms | Allocations: 1309)
+
+
+Started GET "/logo192.png" for 127.0.0.1 at 2022-10-08 21:09:22 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/logo192.png"):
+  
+Started POST "/signup" for 127.0.0.1 at 2022-10-08 21:10:47 +0300
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"jomba", "password"=>"[FILTERED]", "passwordConfirmation"=>"[FILTERED]", "user"=>{"username"=>"jomba"}}
+[31mUnpermitted parameters: :passwordConfirmation, :user[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "jomba"], ["password_digest", "$2a$12$M5AqRwXvqkyXb8lk1YHacOcanMXHYRS1JczeUGpW/KzEEMd9RtWnO"], ["created_at", "2022-10-08 18:10:47.506424"], ["updated_at", "2022-10-08 18:10:47.506424"]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (105.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.8ms)
+Completed 201 Created in 508ms (Views: 4.0ms | ActiveRecord: 111.9ms | Allocations: 4784)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-08 21:13:42 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-08 21:13:59 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-08 21:13:59 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-08 22:13:31 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-08 22:14:23 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-08 22:14:52 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-08 22:14:56 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-08 22:14:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-08 22:14:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2022-10-08 22:14:57 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.06ms)
+Completed 200 OK in 34ms (Views: 0.7ms | ActiveRecord: 8.4ms | Allocations: 3361)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-08 22:18:00 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-08 22:18:00 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-08 22:18:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-08 22:18:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2022-10-08 22:18:01 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 200 OK in 7ms (Views: 1.3ms | ActiveRecord: 0.4ms | Allocations: 1309)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-08 22:18:04 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.09ms)
+Completed 200 OK in 9ms (Views: 0.7ms | ActiveRecord: 1.2ms | Allocations: 1286)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-08 22:18:05 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-08 22:20:11 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  

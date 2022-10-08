@@ -13,9 +13,7 @@ export default function SignUp() {
     textDecoration: "none",
   };
 
-  function handleSubmit() {
-    console.log("radaa");
-  }
+
   console.log(userToDB);
   console.log(imerudi)
 
