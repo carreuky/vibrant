@@ -1,12 +1,26 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 
 export default function NewEvent() {
-  const [eventname, setEventName]=useState()
-  const [fees, setFees]=useState()
-  const [location, setLocation]=useState()
-  const [date, setDate]=useState()
-  const [slots,setSlots]=useState()
-  const [details,setDetails]=useState()
+  const [eventname, setEventName] = useState("");
+  const [fee, setFee] = useState("");
+  const [location, setLocation] = useState("");
+  const [date, setDate] = useState("");
+  const [slots, setSlots] = useState("");
+  const [details, setDetails] = useState("");
+
+  const eventToDB = { eventname, fee, location, date, slots, details };
+
+  // console.log(eventToDB)
+  function handleSubmitEvent() {
+    console.log(eventToDB);
+    setEventName('')
+    setFee('')
+    setLocation('')
+    setDate('')
+    setSlots('')
+    setDetails('')
+  }
+
   return (
     <div>
       <div className="d-flex justify-content-center ">
@@ -27,10 +41,10 @@ export default function NewEvent() {
             </div>
             <div className="form-outline mb-3  ">
               <input
-                onChange={(e) => setFees(e.target.value)}
+                onChange={(e) => setFee(e.target.value)}
                 type="number"
                 id="form3Example3"
-                value={fees}
+                value={fee}
                 className="form-control form-control-lg "
                 placeholder="entry fee"
               />
@@ -62,25 +76,27 @@ export default function NewEvent() {
                 type="number"
                 id="form3Example4"
                 value={slots}
-                onChange={(e)=>setSlots(e.target.value)}
+                onChange={(e) => setSlots(e.target.value)}
                 className="form-control form-control-lg"
                 placeholder="slots available"
               />
             </div>
 
             <div className="form-outline mb-3 ">
-              <input
-                type="text"
-                id="form3Example4"
+              <textarea
+                onChange={(e) => setDetails(e.target.value)}
+                class="form-control"
                 value={details}
-                onChange={(e)=>setDetails(e.target.value)}
-                className="form-control form-control-lg "
+                type="text"
+                id="exampleFormControlTextarea1"
+                rows="3"
                 placeholder="details"
-              />
+              ></textarea>
             </div>
             <div className="text-center text-lg-start mb-3 text-black">
               <button
                 type="button"
+                onClick={handleSubmitEvent}
                 className="btn btn-lg text-white"
                 style={{
                   border: "none",
