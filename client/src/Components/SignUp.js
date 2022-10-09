@@ -32,6 +32,9 @@ export default function SignUp() {
       if (r.ok) {
         r.json().then((user) => setImerudi(user));
       }
+      else{
+        console.log('error')
+      }
     });
   }
   return (
