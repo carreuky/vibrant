@@ -1,6 +1,6 @@
 import React, { useState} from "react";
 import { Link } from "react-router-dom";
-export default function Login() {
+export default function Login({setUser}) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const colorTxt = {
@@ -19,7 +19,7 @@ export default function Login() {
       body: JSON.stringify(loginDetails),
     }).then((r) => {
       if (r.ok) {
-        r.json().then((user) =>console.log(user));
+        r.json().then((user) =>setUser(user));
       }
     });
   }

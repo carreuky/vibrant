@@ -21,17 +21,17 @@ export default function Home() {
               </h3>
             </div>
             <div className="font-weight-normal ">
-              <h1 className="display-5 pt-3" style={{ fontWeight: "bold" }}>
+              <h1 className="display-6 pt-3" style={{ fontWeight: "bolder" }}>
                 Lets Connect You To Events In Your{" "}
                 <span style={txt}>Location</span>. Find Intrested Event to{" "}
                 <span style={txt}>Join</span>
               </h1>
             </div>
             <div className="">
-              <h6 className="py-3">
+              <p className="py-3">
                 Zero hidden service fees, price match guarantee, group discounts
                 and more. Because they make it easy.
-              </h6>
+              </p>
             </div>
             <div className="my-4">
               <button
@@ -49,7 +49,7 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="col-12 col-lg-6 mt-sm-5 pt-xs-4">
+          <div className="col-12 col-lg-6 mt-3 pt-xs-4">
             <img src={image} className="img-fluid" alt="meet -up" />
           </div>
         </div>

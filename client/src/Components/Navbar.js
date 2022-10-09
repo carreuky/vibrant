@@ -60,7 +60,7 @@ export default function Navbar({ user, setUser }) {
                 <li className="nav-item  mx-3">
                   <a
                     onClick={logOut}
-                    href="/"
+                    href=""
                     className="nav-link bg-primary text-white px-4 rounded"
                     style={{
                       backgroundColor: "#0D7CAC",
@@ -82,7 +82,7 @@ export default function Navbar({ user, setUser }) {
             ) : (
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item  mx-3">
-                  <a href="#products" className="nav-link" style={colorTxt}>
+                  <a href="" className="nav-link" style={colorTxt}>
                     <Link to="/" style={{ textDecoration: "none" }}>
                       Home{" "}
                     </Link>
