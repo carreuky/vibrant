@@ -5632,3 +5632,157 @@ No serializer found for resource: #<Event id: 1, eventname: "Fisher", fee: 200, 
 Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 0.9ms | Allocations: 6207)
 
 
+Started GET "/events" for 127.0.0.1 at 2022-10-09 17:09:48 +0300
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:4:in `index'
+No serializer found for resource: #<Event id: 1, eventname: "Fisher", fee: 200, location: "Mbabane", date: "2022-10-21", slots: 2, details: "Amorphous abnormal hideous. Iridescence unmentiona...", created_at: "2022-10-09 14:02:12.637241000 +0000", updated_at: "2022-10-09 14:02:12.637241000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (3.65ms)
+Completed 200 OK in 52ms (Views: 50.4ms | ActiveRecord: 13.1ms | Allocations: 4208)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-09 17:09:49 +0300
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:4:in `index'
+No serializer found for resource: #<Event id: 1, eventname: "Fisher", fee: 200, location: "Mbabane", date: "2022-10-21", slots: 2, details: "Amorphous abnormal hideous. Iridescence unmentiona...", created_at: "2022-10-09 14:02:12.637241000 +0000", updated_at: "2022-10-09 14:02:12.637241000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (4.4ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.6ms | Allocations: 2172)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-09 17:09:50 +0300
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:4:in `index'
+No serializer found for resource: #<Event id: 1, eventname: "Fisher", fee: 200, location: "Mbabane", date: "2022-10-21", slots: 2, details: "Amorphous abnormal hideous. Iridescence unmentiona...", created_at: "2022-10-09 14:02:12.637241000 +0000", updated_at: "2022-10-09 14:02:12.637241000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (13.42ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 1.2ms | Allocations: 2172)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-09 17:09:50 +0300
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:4:in `index'
+No serializer found for resource: #<Event id: 1, eventname: "Fisher", fee: 200, location: "Mbabane", date: "2022-10-21", slots: 2, details: "Amorphous abnormal hideous. Iridescence unmentiona...", created_at: "2022-10-09 14:02:12.637241000 +0000", updated_at: "2022-10-09 14:02:12.637241000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (12.04ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 1.2ms | Allocations: 2172)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-09 17:09:50 +0300
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:4:in `index'
+No serializer found for resource: #<Event id: 1, eventname: "Fisher", fee: 200, location: "Mbabane", date: "2022-10-21", slots: 2, details: "Amorphous abnormal hideous. Iridescence unmentiona...", created_at: "2022-10-09 14:02:12.637241000 +0000", updated_at: "2022-10-09 14:02:12.637241000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (3.99ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.5ms | Allocations: 2172)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-09 17:09:51 +0300
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:4:in `index'
+No serializer found for resource: #<Event id: 1, eventname: "Fisher", fee: 200, location: "Mbabane", date: "2022-10-21", slots: 2, details: "Amorphous abnormal hideous. Iridescence unmentiona...", created_at: "2022-10-09 14:02:12.637241000 +0000", updated_at: "2022-10-09 14:02:12.637241000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (3.96ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.6ms | Allocations: 2172)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-09 17:09:51 +0300
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:4:in `index'
+No serializer found for resource: #<Event id: 1, eventname: "Fisher", fee: 200, location: "Mbabane", date: "2022-10-21", slots: 2, details: "Amorphous abnormal hideous. Iridescence unmentiona...", created_at: "2022-10-09 14:02:12.637241000 +0000", updated_at: "2022-10-09 14:02:12.637241000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (2.28ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.4ms | Allocations: 2172)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-09 17:09:51 +0300
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:4:in `index'
+No serializer found for resource: #<Event id: 1, eventname: "Fisher", fee: 200, location: "Mbabane", date: "2022-10-21", slots: 2, details: "Amorphous abnormal hideous. Iridescence unmentiona...", created_at: "2022-10-09 14:02:12.637241000 +0000", updated_at: "2022-10-09 14:02:12.637241000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (3.63ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.5ms | Allocations: 2172)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-09 17:09:52 +0300
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:4:in `index'
+No serializer found for resource: #<Event id: 1, eventname: "Fisher", fee: 200, location: "Mbabane", date: "2022-10-21", slots: 2, details: "Amorphous abnormal hideous. Iridescence unmentiona...", created_at: "2022-10-09 14:02:12.637241000 +0000", updated_at: "2022-10-09 14:02:12.637241000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (9.83ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 1.1ms | Allocations: 2172)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-09 17:09:53 +0300
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:4:in `index'
+No serializer found for resource: #<Event id: 1, eventname: "Fisher", fee: 200, location: "Mbabane", date: "2022-10-21", slots: 2, details: "Amorphous abnormal hideous. Iridescence unmentiona...", created_at: "2022-10-09 14:02:12.637241000 +0000", updated_at: "2022-10-09 14:02:12.637241000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (4.28ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.6ms | Allocations: 2172)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-09 17:09:53 +0300
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:4:in `index'
+No serializer found for resource: #<Event id: 1, eventname: "Fisher", fee: 200, location: "Mbabane", date: "2022-10-21", slots: 2, details: "Amorphous abnormal hideous. Iridescence unmentiona...", created_at: "2022-10-09 14:02:12.637241000 +0000", updated_at: "2022-10-09 14:02:12.637241000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (4.46ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.4ms | Allocations: 2172)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-09 17:09:53 +0300
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:4:in `index'
+No serializer found for resource: #<Event id: 1, eventname: "Fisher", fee: 200, location: "Mbabane", date: "2022-10-21", slots: 2, details: "Amorphous abnormal hideous. Iridescence unmentiona...", created_at: "2022-10-09 14:02:12.637241000 +0000", updated_at: "2022-10-09 14:02:12.637241000 +0000">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Event::ActiveRecord_Relation (3.74ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.4ms | Allocations: 2172)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-09 17:10:56 +0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.98ms)
+Completed 200 OK in 111ms (Views: 90.8ms | ActiveRecord: 11.1ms | Allocations: 10973)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-09 17:11:12 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.17ms)
+Completed 200 OK in 37ms (Views: 4.3ms | ActiveRecord: 4.4ms | Allocations: 2185)
+
+
+Started GET "/logo192.png" for 127.0.0.1 at 2022-10-09 17:11:12 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/logo192.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-10-09 17:11:23 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"koko", "password"=>"[FILTERED]", "session"=>{"username"=>"koko", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "koko"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.37ms)
+Completed 200 OK in 400ms (Views: 1.2ms | ActiveRecord: 3.5ms | Allocations: 2995)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-10-09 17:22:27 +0300
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 1ms (Allocations: 183)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-09 17:22:27 +0300
+Processing by UsersController#show as */*
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (7.66ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 11ms (Views: 8.5ms | Allocations: 365)
+
+
+Started GET "/logo192.png" for 127.0.0.1 at 2022-10-09 17:22:27 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/logo192.png"):
+  

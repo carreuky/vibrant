@@ -6,7 +6,7 @@ export default function Footer() {
     color: "black",
   };
   return (
-    <div className="pt-4 pb-2 fixed-bottom " style={{ backgroundColor: "#0D7CAC" }}>
+    <div className="pt-4 pb-2" style={{ backgroundColor: "#0D7CAC" }}>
       <div className="container-fluid text-center ">
         <div className="row">
           <div className="col-md-4 col-xs-12">

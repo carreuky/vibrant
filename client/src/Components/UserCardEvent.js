@@ -31,7 +31,7 @@ export default function UserCardEvent() {
 
           <div
             style={yell}
-            className="d-flex justify-content-between col-md-8 col-xs-12 "
+            className="d-flex justify-content-between col-md-5 col-xs-12 "
           >
             <p>Ngong Forest</p>
             <p>22/12/12</p>
