@@ -7152,3 +7152,588 @@ Processing by UsersController#show as */*
 Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 0.8ms | Allocations: 2001)
 
 
+Started GET "/logo192.png" for 127.0.0.1 at 2022-10-10 14:48:40 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/logo192.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-10-10 14:48:44 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"koko", "password"=>"[FILTERED]", "session"=>{"username"=>"koko", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "koko"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.25ms)
+Completed 200 OK in 386ms (Views: 0.8ms | ActiveRecord: 6.8ms | Allocations: 3583)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-10 14:48:44 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:18:in `show'
+[active_model_serializers] Rendered ShowUserEventsSerializer with ActiveModelSerializers::Adapter::Attributes (6.02ms)
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 1.1ms | Allocations: 2024)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-10 15:03:02 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/logo192.png" for 127.0.0.1 at 2022-10-10 15:03:03 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/logo192.png"):
+  
+Started GET "/logo192.png" for 127.0.0.1 at 2022-10-10 15:03:13 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/logo192.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-10-10 15:03:17 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"koko", "password"=>"[FILTERED]", "session"=>{"username"=>"koko", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "koko"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.32ms)
+Completed 200 OK in 404ms (Views: 1.2ms | ActiveRecord: 8.4ms | Allocations: 6804)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-10 15:03:17 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:18:in `show'
+[active_model_serializers] Rendered ShowUserEventsSerializer with ActiveModelSerializers::Adapter::Attributes (24.66ms)
+Completed 200 OK in 31ms (Views: 24.8ms | ActiveRecord: 1.0ms | Allocations: 7077)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-10-10 15:08:26 +0300
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 197)
+
+
+Started GET "/logo192.png" for 127.0.0.1 at 2022-10-10 15:08:27 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/logo192.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-10-10 15:08:38 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"toto", "password"=>"[FILTERED]", "session"=>{"username"=>"toto", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "toto"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.28ms)
+Completed 200 OK in 396ms (Views: 1.3ms | ActiveRecord: 8.8ms | Allocations: 4317)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-10 15:08:39 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1[0m  [["user_id", 3]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:18:in `show'
+[active_model_serializers] Rendered ShowUserEventsSerializer with ActiveModelSerializers::Adapter::Attributes (33.15ms)
+Completed 200 OK in 40ms (Views: 28.6ms | ActiveRecord: 5.9ms | Allocations: 7282)
+
+
+Started GET "/" for 127.0.0.1 at 2022-10-10 15:09:49 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.7.4/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.7.4/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 75.1ms | Allocations: 293)
+Completed 200 OK in 200ms (Views: 83.6ms | ActiveRecord: 0.0ms | Allocations: 2265)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-10-10 15:09:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/events" for 127.0.0.1 at 2022-10-10 15:09:54 +0300
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.01ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.5ms | Allocations: 2375)
+
+
+Started POST "/events" for 127.0.0.1 at 2022-10-10 15:11:16 +0300
+Processing by EventsController#create as */*
+  Parameters: {"id"=>5, "name"=>"Jade Hot", "image"=>"./images/jade.jpg", "likes"=>20, "created_at"=>"2022-09-27T08:16:35.030Z", "updated_at"=>"2022-09-27T09:02:08.924Z", "event"=>{"id"=>5, "created_at"=>"2022-09-27T08:16:35.030Z", "updated_at"=>"2022-09-27T09:02:08.924Z"}}
+[31mUnpermitted parameters: :id, :name, :image, :likes, :created_at, :updated_at, :event[0m
+[active_model_serializers] Rendered EventSerializer with ActiveModelSerializers::Adapter::Attributes (2.1ms)
+Completed 200 OK in 41021ms (Views: 6.7ms | ActiveRecord: 10.7ms | Allocations: 57702)
+
+
+Started POST "/events" for 127.0.0.1 at 2022-10-10 15:12:26 +0300
+Processing by EventsController#create as */*
+  Parameters: {"id"=>5, "name"=>"Jade Hot", "image"=>"./images/jade.jpg", "likes"=>20, "created_at"=>"2022-09-27T08:16:35.030Z", "updated_at"=>"2022-09-27T09:02:08.924Z", "event"=>{"id"=>5, "created_at"=>"2022-09-27T08:16:35.030Z", "updated_at"=>"2022-09-27T09:02:08.924Z"}}
+[31mUnpermitted parameters: :id, :name, :image, :likes, :created_at, :updated_at, :event[0m
+Completed 422 Unprocessable Entity in 6423ms (ActiveRecord: 11.3ms | Allocations: 356914)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist, Eventname can't be blank, Fee can't be blank, Location can't be blank, Date can't be blank, Slots can't be blank, Details can't be blank):
+  
+app/controllers/events_controller.rb:9:in `create'
+Started POST "/events" for 127.0.0.1 at 2022-10-10 15:13:57 +0300
+Processing by EventsController#create as */*
+  Parameters: {"id"=>5, "name"=>"Jade Hot", "image"=>"./images/jade.jpg", "likes"=>20, "created_at"=>"2022-09-27T08:16:35.030Z", "updated_at"=>"2022-09-27T09:02:08.924Z", "event"=>{"id"=>5, "created_at"=>"2022-09-27T08:16:35.030Z", "updated_at"=>"2022-09-27T09:02:08.924Z"}}
+[31mUnpermitted parameters: :id, :name, :image, :likes, :created_at, :updated_at, :event[0m
+Completed 422 Unprocessable Entity in 26ms (ActiveRecord: 6.4ms | Allocations: 7589)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist, Eventname can't be blank, Fee can't be blank, Location can't be blank, Date can't be blank, Slots can't be blank, Details can't be blank):
+  
+app/controllers/events_controller.rb:8:in `create'
+Started POST "/events" for 127.0.0.1 at 2022-10-10 15:20:02 +0300
+Processing by EventsController#create as */*
+  Parameters: {"id"=>5, "name"=>"Jade Hot", "image"=>"./images/jade.jpg", "likes"=>20, "created_at"=>"2022-09-27T08:16:35.030Z", "updated_at"=>"2022-09-27T09:02:08.924Z", "event"=>{"id"=>5, "created_at"=>"2022-09-27T08:16:35.030Z", "updated_at"=>"2022-09-27T09:02:08.924Z"}}
+[31mUnpermitted parameters: :id, :name, :image, :likes, :created_at, :updated_at, :event[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 422 Unprocessable Entity in 26ms (Views: 1.2ms | ActiveRecord: 5.5ms | Allocations: 10487)
+
+
+Started GET "/logo192.png" for 127.0.0.1 at 2022-10-10 15:23:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/logo192.png"):
+  
+Started GET "/logo192.png" for 127.0.0.1 at 2022-10-10 15:26:02 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/logo192.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-10-10 15:26:29 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"koko", "password"=>"[FILTERED]", "session"=>{"username"=>"koko", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "koko"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.35ms)
+Completed 200 OK in 422ms (Views: 1.2ms | ActiveRecord: 18.1ms | Allocations: 6037)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-10 15:26:29 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:18:in `show'
+[active_model_serializers] Rendered ShowUserEventsSerializer with ActiveModelSerializers::Adapter::Attributes (10.92ms)
+Completed 200 OK in 17ms (Views: 11.1ms | ActiveRecord: 1.0ms | Allocations: 2929)
+
+
+Started POST "/events" for 127.0.0.1 at 2022-10-10 15:26:58 +0300
+Processing by EventsController#create as */*
+  Parameters: {"id"=>5, "name"=>"Jade Hot", "image"=>"./images/jade.jpg", "likes"=>20, "created_at"=>"2022-09-27T08:16:35.030Z", "updated_at"=>"2022-09-27T09:02:08.924Z", "event"=>{"id"=>5, "created_at"=>"2022-09-27T08:16:35.030Z", "updated_at"=>"2022-09-27T09:02:08.924Z"}}
+[31mUnpermitted parameters: :id, :name, :image, :likes, :created_at, :updated_at, :event[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 422 Unprocessable Entity in 22ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 5914)
+
+
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/logo192.png" for 127.0.0.1 at 2022-10-10 15:28:18 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/logo192.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-10-10 15:28:23 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"koko", "password"=>"[FILTERED]", "session"=>{"username"=>"koko", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "koko"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.3ms)
+Completed 200 OK in 379ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 862)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-10 15:28:24 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:18:in `show'
+[active_model_serializers] Rendered ShowUserEventsSerializer with ActiveModelSerializers::Adapter::Attributes (6.11ms)
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.8ms | Allocations: 1983)
+
+
+Started POST "/events?eventname=%27%27" for 127.0.0.1 at 2022-10-10 15:32:15 +0300
+Processing by EventsController#create as */*
+  Parameters: {"id"=>5, "name"=>"Jade Hot", "image"=>"./images/jade.jpg", "likes"=>20, "created_at"=>"2022-09-27T08:16:35.030Z", "updated_at"=>"2022-09-27T09:02:08.924Z", "eventname"=>"''", "event"=>{"id"=>5, "created_at"=>"2022-09-27T08:16:35.030Z", "updated_at"=>"2022-09-27T09:02:08.924Z"}}
+[31mUnpermitted parameters: :id, :name, :image, :likes, :created_at, :updated_at, :event[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 422 Unprocessable Entity in 15ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 5155)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-10 15:36:02 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/logo192.png" for 127.0.0.1 at 2022-10-10 15:40:54 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/logo192.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-10-10 15:41:11 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"koko", "password"=>"[FILTERED]", "session"=>{"username"=>"koko", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "koko"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.3ms)
+Completed 200 OK in 391ms (Views: 1.2ms | ActiveRecord: 4.1ms | Allocations: 4300)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-10 15:41:11 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:18:in `show'
+[active_model_serializers] Rendered ShowUserEventsSerializer with ActiveModelSerializers::Adapter::Attributes (22.02ms)
+Completed 200 OK in 28ms (Views: 18.0ms | ActiveRecord: 5.0ms | Allocations: 7440)
+
+
+Started POST "/events" for 127.0.0.1 at 2022-10-10 15:41:19 +0300
+Processing by EventsController#create as */*
+  Parameters: {"user_id"=>1, "event"=>{"user_id"=>1}}
+[31mUnpermitted parameter: :event[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/events_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 422 Unprocessable Entity in 41ms (Views: 2.8ms | ActiveRecord: 1.0ms | Allocations: 7143)
+
+
+Started GET "/logo192.png" for 127.0.0.1 at 2022-10-10 15:43:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/logo192.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-10-10 15:43:04 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"koko", "password"=>"[FILTERED]", "session"=>{"username"=>"koko", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "koko"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.47ms)
+Completed 200 OK in 387ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 852)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-10 15:43:04 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:18:in `show'
+[active_model_serializers] Rendered ShowUserEventsSerializer with ActiveModelSerializers::Adapter::Attributes (6.39ms)
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 0.8ms | Allocations: 1991)
+
+
+Started POST "/events" for 127.0.0.1 at 2022-10-10 15:43:07 +0300
+Processing by EventsController#create as */*
+  Parameters: {"user_id"=>1, "event"=>{"user_id"=>1}}
+[31mUnpermitted parameter: :event[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/events_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 422 Unprocessable Entity in 31ms (Views: 1.0ms | ActiveRecord: 1.3ms | Allocations: 6884)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-10 15:44:59 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-10 15:45:00 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-10 15:45:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-10 15:45:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-10 15:45:16 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-10 15:45:27 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-10 15:45:27 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-10 15:45:42 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-10 15:45:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-10 15:45:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-10 15:46:14 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-10 15:46:15 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/events" for 127.0.0.1 at 2022-10-10 15:47:52 +0300
+Processing by EventsController#create as */*
+  Parameters: {"eventname"=>"Chema", "fee"=>"10", "location"=>"Matunda", "date"=>"2022-10-15", "slots"=>"10", "details"=>"Unfortunately there's an issue with just applying reversion commits and then merging your branch_b if there are any common changes. The reversion may undo changes which then may not be reapplied, depending on when you did the branching", "user_id"=>1, "event"=>{"eventname"=>"Chema", "fee"=>"10", "location"=>"Matunda", "date"=>"2022-10-15", "slots"=>"10", "details"=>"Unfortunately there's an issue with just applying reversion commits and then merging your branch_b if there are any common changes. The reversion may undo changes which then may not be reapplied, depending on when you did the branching", "user_id"=>1}}
+[31mUnpermitted parameter: :event[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mEvent Create (425.0ms)[0m  [1m[32mINSERT INTO "events" ("eventname", "fee", "location", "date", "slots", "details", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["eventname", "Chema"], ["fee", 10], ["location", "Matunda"], ["date", "2022-10-15"], ["slots", 10], ["details", "Unfortunately there's an issue with just applying reversion commits and then merging your branch_b if there are any common changes. The reversion may undo changes which then may not be reapplied, depending on when you did the branching"], ["user_id", 1], ["created_at", "2022-10-10 12:47:52.703223"], ["updated_at", "2022-10-10 12:47:52.703223"]]
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (24.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:9:in `create'
+[active_model_serializers] Rendered EventSerializer with ActiveModelSerializers::Adapter::Attributes (1.1ms)
+Completed 200 OK in 469ms (Views: 3.6ms | ActiveRecord: 449.9ms | Allocations: 3046)
+
+
+Started POST "/events" for 127.0.0.1 at 2022-10-10 15:48:18 +0300
+Processing by EventsController#create as */*
+  Parameters: {"eventname"=>"", "fee"=>"", "location"=>"", "date"=>"", "slots"=>"", "details"=>"", "user_id"=>1, "event"=>{"eventname"=>"", "fee"=>"", "location"=>"", "date"=>"", "slots"=>"", "details"=>"", "user_id"=>1}}
+[31mUnpermitted parameter: :event[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/events_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 422 Unprocessable Entity in 20ms (Views: 0.6ms | ActiveRecord: 0.7ms | Allocations: 6919)
+
+
+Started GET "/logo192.png" for 127.0.0.1 at 2022-10-10 15:48:51 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/logo192.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-10-10 15:49:01 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"koko", "password"=>"[FILTERED]", "session"=>{"username"=>"koko", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "koko"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.28ms)
+Completed 200 OK in 379ms (Views: 0.8ms | ActiveRecord: 0.6ms | Allocations: 840)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-10 15:49:01 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:18:in `show'
+[active_model_serializers] Rendered ShowUserEventsSerializer with ActiveModelSerializers::Adapter::Attributes (7.31ms)
+Completed 200 OK in 13ms (Views: 7.4ms | ActiveRecord: 0.9ms | Allocations: 2140)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-10-10 15:49:06 +0300
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 201)
+
+
+Started GET "/logo192.png" for 127.0.0.1 at 2022-10-10 15:49:07 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/logo192.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-10-10 15:49:08 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"koko", "password"=>"[FILTERED]", "session"=>{"username"=>"koko", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "koko"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.29ms)
+Completed 200 OK in 385ms (Views: 0.9ms | ActiveRecord: 0.8ms | Allocations: 852)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-10 15:49:09 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:18:in `show'
+[active_model_serializers] Rendered ShowUserEventsSerializer with ActiveModelSerializers::Adapter::Attributes (6.14ms)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.7ms | Allocations: 2144)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-10-10 15:49:42 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"koko", "password"=>"[FILTERED]", "session"=>{"username"=>"koko", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "koko"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.27ms)
+Completed 200 OK in 376ms (Views: 0.8ms | ActiveRecord: 0.4ms | Allocations: 858)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-10 15:49:42 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:18:in `show'
+[active_model_serializers] Rendered ShowUserEventsSerializer with ActiveModelSerializers::Adapter::Attributes (8.47ms)
+Completed 200 OK in 15ms (Views: 11.0ms | ActiveRecord: 1.3ms | Allocations: 2142)
+
+
+Started POST "/events" for 127.0.0.1 at 2022-10-10 15:50:36 +0300
+Processing by EventsController#create as */*
+  Parameters: {"eventname"=>"Chema", "fee"=>"120", "location"=>"Nakuru", "date"=>"2022-10-22", "slots"=>"25", "details"=>"Unfortunately there's an issue with just applying reversion commits and then merging your branch_b if there are any common changes. The reversion may undo changes which then may not be reapplied, depending on when you did the branching", "user_id"=>1, "event"=>{"eventname"=>"Chema", "fee"=>"120", "location"=>"Nakuru", "date"=>"2022-10-22", "slots"=>"25", "details"=>"Unfortunately there's an issue with just applying reversion commits and then merging your branch_b if there are any common changes. The reversion may undo changes which then may not be reapplied, depending on when you did the branching", "user_id"=>1}}
+[31mUnpermitted parameter: :event[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mEvent Create (0.6ms)[0m  [1m[32mINSERT INTO "events" ("eventname", "fee", "location", "date", "slots", "details", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["eventname", "Chema"], ["fee", 120], ["location", "Nakuru"], ["date", "2022-10-22"], ["slots", 25], ["details", "Unfortunately there's an issue with just applying reversion commits and then merging your branch_b if there are any common changes. The reversion may undo changes which then may not be reapplied, depending on when you did the branching"], ["user_id", 1], ["created_at", "2022-10-10 12:50:36.486969"], ["updated_at", "2022-10-10 12:50:36.486969"]]
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (22.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:9:in `create'
+[active_model_serializers] Rendered EventSerializer with ActiveModelSerializers::Adapter::Attributes (0.65ms)
+Completed 200 OK in 49ms (Views: 1.5ms | ActiveRecord: 23.9ms | Allocations: 2918)
+
+
+Started POST "/events" for 127.0.0.1 at 2022-10-10 15:54:00 +0300
+Processing by EventsController#create as */*
+  Parameters: {"eventname"=>"chama", "fee"=>"120", "location"=>"Nkauru", "date"=>"2022-10-22", "slots"=>"12", "details"=>"Unfortunately there's an issue with just applying reversion commits and then merging your branch_b if there are any common changes. The reversion may undo changes which then may not be reapplied, depending on when you did the branching", "user_id"=>1, "event"=>{"eventname"=>"chama", "fee"=>"120", "location"=>"Nkauru", "date"=>"2022-10-22", "slots"=>"12", "details"=>"Unfortunately there's an issue with just applying reversion commits and then merging your branch_b if there are any common changes. The reversion may undo changes which then may not be reapplied, depending on when you did the branching", "user_id"=>1}}
+[31mUnpermitted parameter: :event[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mEvent Create (0.5ms)[0m  [1m[32mINSERT INTO "events" ("eventname", "fee", "location", "date", "slots", "details", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["eventname", "chama"], ["fee", 120], ["location", "Nkauru"], ["date", "2022-10-22"], ["slots", 12], ["details", "Unfortunately there's an issue with just applying reversion commits and then merging your branch_b if there are any common changes. The reversion may undo changes which then may not be reapplied, depending on when you did the branching"], ["user_id", 1], ["created_at", "2022-10-10 12:54:00.107873"], ["updated_at", "2022-10-10 12:54:00.107873"]]
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (19.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:9:in `create'
+[active_model_serializers] Rendered EventSerializer with ActiveModelSerializers::Adapter::Attributes (0.54ms)
+Completed 200 OK in 35ms (Views: 1.2ms | ActiveRecord: 20.6ms | Allocations: 2921)
+
+
+Started GET "/logo192.png" for 127.0.0.1 at 2022-10-10 15:54:55 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/logo192.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-10-10 15:54:57 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"koko", "password"=>"[FILTERED]", "session"=>{"username"=>"koko", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "koko"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.27ms)
+Completed 200 OK in 377ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 850)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-10 15:54:57 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:18:in `show'
+[active_model_serializers] Rendered ShowUserEventsSerializer with ActiveModelSerializers::Adapter::Attributes (8.06ms)
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 0.8ms | Allocations: 2428)
+
+
+Started POST "/events" for 127.0.0.1 at 2022-10-10 15:55:32 +0300
+Processing by EventsController#create as */*
+  Parameters: {"eventname"=>"jomba", "fee"=>"120", "location"=>"Kenya", "date"=>"2022-10-22", "slots"=>"150", "details"=>"Unfortunately there's an issue with just applying reversion commits and then merging your branch_b if there are any common changes. The reversion may undo changes which then may not be reapplied, depending on when you did the branching", "user_id"=>1, "event"=>{"eventname"=>"jomba", "fee"=>"120", "location"=>"Kenya", "date"=>"2022-10-22", "slots"=>"150", "details"=>"Unfortunately there's an issue with just applying reversion commits and then merging your branch_b if there are any common changes. The reversion may undo changes which then may not be reapplied, depending on when you did the branching", "user_id"=>1}}
+[31mUnpermitted parameter: :event[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mEvent Create (0.5ms)[0m  [1m[32mINSERT INTO "events" ("eventname", "fee", "location", "date", "slots", "details", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["eventname", "jomba"], ["fee", 120], ["location", "Kenya"], ["date", "2022-10-22"], ["slots", 150], ["details", "Unfortunately there's an issue with just applying reversion commits and then merging your branch_b if there are any common changes. The reversion may undo changes which then may not be reapplied, depending on when you did the branching"], ["user_id", 1], ["created_at", "2022-10-10 12:55:32.450807"], ["updated_at", "2022-10-10 12:55:32.450807"]]
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (86.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:9:in `create'
+[active_model_serializers] Rendered EventSerializer with ActiveModelSerializers::Adapter::Attributes (1.03ms)
+Completed 200 OK in 107ms (Views: 2.6ms | ActiveRecord: 89.2ms | Allocations: 2919)
+
+
+  [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started DELETE "/logout" for 127.0.0.1 at 2022-10-10 15:57:17 +0300
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 172)
+
+
+Started GET "/logo192.png" for 127.0.0.1 at 2022-10-10 15:57:18 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/logo192.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-10-10 15:57:19 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"koko", "password"=>"[FILTERED]", "session"=>{"username"=>"koko", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "koko"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.27ms)
+Completed 200 OK in 375ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 851)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-10 15:57:20 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:18:in `show'
+[active_model_serializers] Rendered ShowUserEventsSerializer with ActiveModelSerializers::Adapter::Attributes (8.05ms)
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 0.9ms | Allocations: 2574)
+
+
+Started POST "/events" for 127.0.0.1 at 2022-10-10 15:58:03 +0300
+Processing by EventsController#create as */*
+  Parameters: {"eventname"=>"jomba", "fee"=>"8", "location"=>"Nakuru", "date"=>"2022-10-14", "slots"=>"1", "details"=>"Unfortunately there's an issue with just applying reversion commits and then merging your branch_b if there are any common changes. The reversion may undo changes which then may not be reapplied, depending on when you did the branching", "user_id"=>1, "event"=>{"eventname"=>"jomba", "fee"=>"8", "location"=>"Nakuru", "date"=>"2022-10-14", "slots"=>"1", "details"=>"Unfortunately there's an issue with just applying reversion commits and then merging your branch_b if there are any common changes. The reversion may undo changes which then may not be reapplied, depending on when you did the branching", "user_id"=>1}}
+[31mUnpermitted parameter: :event[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mEvent Create (0.5ms)[0m  [1m[32mINSERT INTO "events" ("eventname", "fee", "location", "date", "slots", "details", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["eventname", "jomba"], ["fee", 8], ["location", "Nakuru"], ["date", "2022-10-14"], ["slots", 1], ["details", "Unfortunately there's an issue with just applying reversion commits and then merging your branch_b if there are any common changes. The reversion may undo changes which then may not be reapplied, depending on when you did the branching"], ["user_id", 1], ["created_at", "2022-10-10 12:58:03.067194"], ["updated_at", "2022-10-10 12:58:03.067194"]]
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (20.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:9:in `create'
+[active_model_serializers] Rendered EventSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 200 OK in 34ms (Views: 1.1ms | ActiveRecord: 21.4ms | Allocations: 2918)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-10 15:58:05 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:18:in `show'
+[active_model_serializers] Rendered ShowUserEventsSerializer with ActiveModelSerializers::Adapter::Attributes (5.18ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.5ms | Allocations: 2717)
+
+
+Started POST "/events" for 127.0.0.1 at 2022-10-10 15:58:38 +0300
+Processing by EventsController#create as */*
+  Parameters: {"eventname"=>"koko", "fee"=>"25", "location"=>"toto", "date"=>"2022-10-29", "slots"=>"6", "details"=>"Unfortunately there's an issue with just applying reversion commits and then merging your branch_b if there are any common changes. The reversion may undo changes which then may not be reapplied, depending on when you did the branching", "user_id"=>1, "event"=>{"eventname"=>"koko", "fee"=>"25", "location"=>"toto", "date"=>"2022-10-29", "slots"=>"6", "details"=>"Unfortunately there's an issue with just applying reversion commits and then merging your branch_b if there are any common changes. The reversion may undo changes which then may not be reapplied, depending on when you did the branching", "user_id"=>1}}
+[31mUnpermitted parameter: :event[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mEvent Create (0.6ms)[0m  [1m[32mINSERT INTO "events" ("eventname", "fee", "location", "date", "slots", "details", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["eventname", "koko"], ["fee", 25], ["location", "toto"], ["date", "2022-10-29"], ["slots", 6], ["details", "Unfortunately there's an issue with just applying reversion commits and then merging your branch_b if there are any common changes. The reversion may undo changes which then may not be reapplied, depending on when you did the branching"], ["user_id", 1], ["created_at", "2022-10-10 12:58:38.661480"], ["updated_at", "2022-10-10 12:58:38.661480"]]
+  ↳ app/controllers/events_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (113.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:9:in `create'
+[active_model_serializers] Rendered EventSerializer with ActiveModelSerializers::Adapter::Attributes (1.73ms)
+Completed 200 OK in 134ms (Views: 4.1ms | ActiveRecord: 114.8ms | Allocations: 2922)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-10 15:58:41 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:17:in `show'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:18:in `show'
+[active_model_serializers] Rendered ShowUserEventsSerializer with ActiveModelSerializers::Adapter::Attributes (8.56ms)
+Completed 200 OK in 13ms (Views: 8.9ms | ActiveRecord: 0.9ms | Allocations: 2864)
+
+

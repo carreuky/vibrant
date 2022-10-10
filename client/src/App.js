@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Navbar from "./Components/Navbar";
 import { Switch, Route } from "react-router-dom";
 import SignUp from "./Components/SignUp";

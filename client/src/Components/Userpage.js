@@ -38,7 +38,7 @@ export default function Userpage({ user }) {
             </label>
         </div>
       </div>
-     {toggleCreate ?<NewEvent/>:<UserCardEvent/>} 
+     {toggleCreate ?<NewEvent user_id={user.id}/>:<UserCardEvent/>} 
     </div>
   );
 }

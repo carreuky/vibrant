@@ -1,24 +1,58 @@
 import React, { useState } from "react";
 
-export default function NewEvent() {
-  const [eventname, setEventName] = useState("");
-  const [fee, setFee] = useState("");
-  const [location, setLocation] = useState("");
-  const [date, setDate] = useState("");
-  const [slots, setSlots] = useState("");
-  const [details, setDetails] = useState("");
+export default function NewEvent({ user_id }) {
+  const [eventname, setEventName] = useState();
+  const [fee, setFee] = useState();
+  const [location, setLocation] = useState();
+  const [date, setDate] = useState();
+  const [slots, setSlots] = useState();
+  const [details, setDetails] = useState();
+  const [error, setError] = useState();
+  const [newEvent, setnewEvent] = useState({});
 
-  const eventToDB = { eventname, fee, location, date, slots, details };
 
-  // console.log(eventToDB)
-  function handleSubmitEvent() {
-    console.log(eventToDB);
-    setEventName('')
-    setFee('')
-    setLocation('')
-    setDate('')
-    setSlots('')
-    setDetails('')
+  const errormessage = error?.map((error) => {
+    return (
+      <>
+        <li className="text-danger pt-3">{error}</li>
+      </>
+    );
+  });
+  console.log(newEvent);
+  const eventToDB = {
+    eventname,
+    fee,
+    location,
+    date,
+    slots,
+    details,
+    user_id: user_id
+  };
+
+  // console.log(error);
+  console.log(eventToDB)
+  console.log(user_id)
+  function handleSubmitEvent(e) {
+    e.preventDefault();
+    fetch("/events", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(eventToDB),
+    }).then((r) => {
+      if (r.ok) {
+        r.json().then((event) => console.log(event));
+        setEventName("");
+        setFee("");
+        setLocation("");
+        setDate("");
+        setSlots("");
+        setDetails("");
+      } else {
+        r.json().then((error) => setError(Object.values(error)));
+      }
+    });
   }
 
   return (
@@ -109,6 +143,7 @@ export default function NewEvent() {
               >
                 Submit
               </button>
+              {errormessage}
             </div>
           </form>
         </div>
