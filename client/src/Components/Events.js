@@ -26,10 +26,11 @@ export default function Events() {
       </div>
 
       <div className="container">
-        <div className="row m-4">
+        <div className="row m-4 ">
        {view}
         </div>
       </div>
+      
     </div>
   );
 }

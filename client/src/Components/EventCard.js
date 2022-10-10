@@ -2,7 +2,7 @@ import React from "react";
 
 export default function EventCard({eachEvent}) {
   return (
-    <div className="col-sm-6 col-lg-4">
+    <div className="col-sm-6 col-lg-4 mb-3">
       <div className="card">
         <div className="card-body">
           <div className="d-flex justify-content-between">
