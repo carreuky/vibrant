@@ -7,7 +7,6 @@ import Home from "./Components/Home";
 import Events from "./Components/Events";
 import Footer from "./Components/Footer";
 import Userpage from "./Components/Userpage";
-import NewEvent from "./Components/NewEvent";
 
 function App() {
   const [user, setUser] = useState(null);

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { FaDigitalOcean } from "react-icons/fa";
 
 export default function Navbar({ user, setUser }) {
-  console.log(user);
   const colorTxt = {
     color: "#0D7CAC",
     fontSize: "20px",
@@ -11,7 +10,6 @@ export default function Navbar({ user, setUser }) {
   };
 
   function logOut() {
-    console.log("dsds");
     fetch("/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
         setUser(null);

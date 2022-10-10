@@ -85,7 +85,7 @@ export default function NewEvent() {
             <div className="form-outline mb-3 ">
               <textarea
                 onChange={(e) => setDetails(e.target.value)}
-                class="form-control"
+                className="form-control"
                 value={details}
                 type="text"
                 id="exampleFormControlTextarea1"

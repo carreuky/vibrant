@@ -1,6 +1,23 @@
-import React from "react";
+import React ,{useEffect,useState}from "react";
+import EventCard from "./EventCard";
 
 export default function Events() {
+  const [events, setEvents] = useState([]);
+  console.log(events);
+
+  const view = events.map((eve) => {
+    return <EventCard eachEvent={eve} />;
+  });
+
+  useEffect(() => {
+    fetch("/events")
+      .then((r) => r.json())
+      .then((data) => {
+        setEvents(data);
+
+      });
+  }, []);
+
   return (
     <div>
       <div className="text-center">
@@ -10,43 +27,7 @@ export default function Events() {
 
       <div className="container">
         <div className="row m-4">
-          <div className="col-sm-6 col-lg-4">
-            <div className="card">
-              <div className="card-body">
-                <div className="d-flex justify-content-between">
-                  <h5 className="card-title">Special title treatment</h5>
-                  <h6>Date</h6>
-                </div>
-                <p className="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
-                </p>
-                <div className="d-flex justify-content-between ">
-                <button href="" className="btn btn-primary"  style={{
-                      backgroundColor: "#0D7CAC",
-                    }}>
-                  Book{" "}
-                </button>
-                <p className ="">KSH 250</p>
-                </div>
-               
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 col-lg-4">
-            <div className="card">
-              <div className="card-body">
-                <h5 className="card-title">Special title treatment</h5>
-                <p className="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
-                </p>
-                <button href="" className="btn btn-primary">
-                  Book{" "}
-                </button>
-              </div>
-            </div>
-          </div>
+       {view}
         </div>
       </div>
     </div>
