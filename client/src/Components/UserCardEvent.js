@@ -5,8 +5,8 @@ export default function UserCardEvent() {
     const yell = { color: "#FDFF00", fontWeight: "bold" };
 
     console.log(mine)
+    
     useEffect(() => {
-      // auto-login
       fetch("/me").then((r) => {
         if (r.ok) {
           r.json().then((user) => setMine(user));
