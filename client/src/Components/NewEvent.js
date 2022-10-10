@@ -18,7 +18,7 @@ export default function NewEvent({ user_id }) {
       </>
     );
   });
-  console.log(newEvent);
+  // console.log(newEvent);
   const eventToDB = {
     eventname,
     fee,
@@ -30,8 +30,8 @@ export default function NewEvent({ user_id }) {
   };
 
   // console.log(error);
-  console.log(eventToDB)
-  console.log(user_id)
+  // console.log(eventToDB)
+  // console.log(user_id)
   function handleSubmitEvent(e) {
     e.preventDefault();
     fetch("/events", {
