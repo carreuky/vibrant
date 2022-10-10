@@ -7,20 +7,12 @@ import Home from "./Components/Home";
 import Events from "./Components/Events";
 import Footer from "./Components/Footer";
 import Userpage from "./Components/Userpage";
-import NewEvent from "./Components/NewEvent";
 
 function App() {
   const [user, setUser] = useState(null);
   console.log(user);
 
-  useEffect(() => {
-    // auto-login
-    fetch("/me").then((r) => {
-      if (r.ok) {
-        r.json().then((user) => setUser(user));
-      }
-    });
-  }, []);
+
   return (
     <div className="App">
       <Navbar user={user} setUser={setUser} />
