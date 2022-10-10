@@ -29,8 +29,8 @@ class UsersController < ApplicationController
         params.permit(:username, :password, :password_confirmation)
     end
 
-    def authorize
-        return render json: { error: "Invalid username or password" }, status: :unauthorized unless session.include? :user_id
+    def authorize(invalid)
+        return render json: { errors: invalid.record.errors.full_messages }, status: :unauthorized unless session.include? :user_id
     end
 
 end

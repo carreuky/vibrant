@@ -9,17 +9,10 @@ import Footer from "./Components/Footer";
 import Userpage from "./Components/Userpage";
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState();
   console.log(user);
 
-  useEffect(() => {
-    // auto-login
-    fetch("/me").then((r) => {
-      if (r.ok) {
-        r.json().then((user) => setUser(user));
-      }
-    });
-  }, []);
+ 
   return (
     <div className="App">
       <Navbar user={user} setUser={setUser} />

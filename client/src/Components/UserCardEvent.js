@@ -3,9 +3,9 @@ import React from "react";
 export default function UserCardEvent({ myevents }) {
   const yell = { color: "#FDFF00", fontWeight: "bold" };
   console.log(myevents);
-  return <div>{myevents.map((one) => {
+  return <div>{myevents?.map((one) => {
     return(
-      <div key={one.id} className="card m-5 rounded">
+      <div key={one.id} className="card m-5 rounded ">
         <h5 className="card-header pl-2 ">{one.eventname}</h5>
         <div className="card-body" style={{ backgroundColor: "#0D7CAC" }}>
           <div className="row  pb-2">
