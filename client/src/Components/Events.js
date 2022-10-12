@@ -4,7 +4,7 @@ import EventCard from "./EventCard";
 export default function Events() {
   const [events, setEvents] = useState([]);
   const [success,setSuccess] = useState()
-
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,6 +19,7 @@ export default function Events() {
       </>
     );
   });
+  
   const view = events.map((eve) => {
     return (
       <EventCard

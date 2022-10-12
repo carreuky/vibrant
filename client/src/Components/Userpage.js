@@ -4,6 +4,19 @@ import NewEvent from "./NewEvent";
 
 export default function Userpage({ user }) {
   const [toggleCreate, setToggleCreate]=useState(false)
+  const [eventForm,setEventForm]=useState({
+    eventname:'',
+    fee:'',
+    location:'',
+    date:'',
+    slots:'',
+    details:'',
+    user_id: user.id
+  })
+  const [eventEdit,setEventEdit]=useState()
+  console.log(eventEdit)
+
+
   const colorTxt = {
     color: "#0D7CAC",
     fontSize: "30px",
@@ -38,7 +51,7 @@ export default function Userpage({ user }) {
             </label>
         </div>
       </div>
-     {toggleCreate ?<NewEvent user_id={user.id}/>:<UserCardEvent/>} 
+     {toggleCreate ?<NewEvent setEventForm={setEventForm} eventEdit={eventEdit}    eventForm={eventForm}/>:<UserCardEvent setToggleCreate={setToggleCreate} toggleCreate={toggleCreate} setEventEdit={setEventEdit}/>} 
     </div>
   );
 }

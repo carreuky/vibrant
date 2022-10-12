@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 
-export default function UserCardEvent() {
+export default function UserCardEvent({
+  setToggleCreate,
+  toggleCreate,
+  setEventEdit,
+}) {
   const [mine, setMine] = useState([]);
   const yell = { color: "#FDFF00", fontWeight: "bold" };
-
-  console.log(mine);
 
   function deleteEvent(id) {
     const updatedEvents = mine?.filter((one) => one.id !== id);
@@ -20,17 +22,18 @@ export default function UserCardEvent() {
   }, []);
 
   function handleDeleteClick(one) {
-    let id=one.id
-    console.log(id)
+    let id = one.id;
+    console.log(id);
     fetch(`/events/${id}`, {
       method: "DELETE",
-    })
-    deleteEvent(id)
+    });
+    deleteEvent(id);
   }
 
   return (
-    <div>
+    <Fragment>
       {mine?.map((one) => {
+        setEventEdit(one);
         return (
           <div key={one.id} className="card m-5 rounded ">
             <h5 className="card-header pl-2 ">{one.eventname}</h5>
@@ -46,10 +49,11 @@ export default function UserCardEvent() {
                     >
                       Edit
                     </button>
+
                     <button
                       type="button"
                       className="btn btn-danger mx-2"
-                      onClick={()=>handleDeleteClick(one)}
+                      onClick={() => handleDeleteClick(one)}
                     >
                       Delete
                     </button>
@@ -70,6 +74,6 @@ export default function UserCardEvent() {
           </div>
         );
       })}
-    </div>
+    </Fragment>
   );
 }
