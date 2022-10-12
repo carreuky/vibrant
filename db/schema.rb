@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2022_10_10_145859) do
     t.string "name"
     t.string "email"
     t.string "phonenumber"
+    t.integer "event_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

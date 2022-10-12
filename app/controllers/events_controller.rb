@@ -8,13 +8,18 @@ class EventsController < ApplicationController
     def create
         event = Event.create!(event_params)
         render json: event,status: :ok
-
     end
 
     def destroy
         event =Event.find(params[:id])
         event.destroy
         head :no_content
+    end
+
+    def decrement_slots
+        event=Event.find(params[:id])
+        event.update(slots: event.slots - 1 )
+        render json: event
     end
 
     private

@@ -4,6 +4,7 @@ class CreateAttendees < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :email
       t.string :phonenumber
+      t.integer :event_id
 
       t.timestamps
     end

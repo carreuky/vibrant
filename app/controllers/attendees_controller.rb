@@ -3,13 +3,13 @@ class AttendeesController < ApplicationController
 
 def create
     attendee=Attendee.create!(attendee_params)
-    render json: attendee, status: :ok
+    render json:{success:'Successfully submitted.'}, status: :created
 end
 
 
 private
 def attendee_params
-    params.permit(:name, :email, :phonenumber)
+    params.permit(:name, :email, :phonenumber ,:event_id)
 end
 
 def render_unproccessable_entity_response(invalid)
