@@ -5,6 +5,10 @@ class EventsController < ApplicationController
         render json: r
     end
 
+    def show
+        r=Event.find(params[:id])
+    end
+
     def create
         event = Event.create!(event_params)
         render json: event,status: :ok

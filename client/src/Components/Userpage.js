@@ -51,7 +51,7 @@ export default function Userpage({ user }) {
             </label>
         </div>
       </div>
-     {toggleCreate ?<NewEvent setEventForm={setEventForm} eventEdit={eventEdit}    eventForm={eventForm}/>:<UserCardEvent setToggleCreate={setToggleCreate} toggleCreate={toggleCreate} setEventEdit={setEventEdit}/>} 
+     {toggleCreate ?<NewEvent setEventForm={setEventForm} eventEdit={eventEdit}    eventForm={eventForm}/>:<UserCardEvent  setEventEdit={setEventEdit} eventEdit={eventEdit}/>} 
     </div>
   );
 }
