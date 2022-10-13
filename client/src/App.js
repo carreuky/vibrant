@@ -9,10 +9,13 @@ import Footer from "./Components/Footer";
 import Userpage from "./Components/Userpage";
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState();
   console.log(user);
 
+<<<<<<< HEAD
 
+=======
+ 
   return (
     <div className="App">
       <Navbar user={user} setUser={setUser} />

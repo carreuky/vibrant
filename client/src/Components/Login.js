@@ -1,14 +1,24 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-export default function Login({setUser}) {
+export default function Login({ setUser }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState();
   const colorTxt = {
     color: "#0D7CAC",
     textDecoration: "none",
   };
-
-  const loginDetails={username,password}
+  console.log(error);
+  
+  const errormessage = error?.map((error) => {
+    return (
+      <>
+        <p className="text-danger pt-3">{error}</p>
+      </>
+    );
+  });
+  console.log(errormessage)
+  const loginDetails = { username, password };
   function handleSubmit(e) {
     e.preventDefault();
     fetch("/login", {
@@ -19,7 +29,9 @@ export default function Login({setUser}) {
       body: JSON.stringify(loginDetails),
     }).then((r) => {
       if (r.ok) {
-        r.json().then((user) =>setUser(user));
+        r.json().then((user) => setUser(user));
+      } else {
+        r.json().then((error) => setError(Object.values(error)));
       }
     });
   }
@@ -76,7 +88,7 @@ export default function Login({setUser}) {
                 </div>
                 <div className="text-center text-lg-start">
                   <button
-                  onClick={handleSubmit}
+                    onClick={handleSubmit}
                     type="button"
                     className="btn btn-primary btn-lg"
                     style={{
@@ -91,6 +103,7 @@ export default function Login({setUser}) {
                   >
                     Login
                   </button>
+                  {errormessage}
                 </div>
               </form>
             </div>
