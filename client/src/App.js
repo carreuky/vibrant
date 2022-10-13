@@ -11,6 +11,8 @@ import Userpage from "./Components/Userpage";
 function App() {
   const [user, setUser] = useState(null);
 
+  console.log(user)
+
   useEffect(() => {
     fetch("/me").then((r) => {
       if (r.ok) {
