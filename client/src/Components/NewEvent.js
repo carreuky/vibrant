@@ -4,11 +4,12 @@ export default function NewEvent({
   user_id,
   setEventForm,
   eventForm,
-  eventEdit,
+  editText,
+  setToggleCreate,
+  toggleCreate,
 }) {
   const [error, setError] = useState();
-
-  console.log(eventEdit);
+    console.log(eventForm.id)
   function handleChange(e) {
     console.log(eventForm);
     let name = e.target.name;
@@ -28,10 +29,25 @@ export default function NewEvent({
     );
   });
 
+
+
   function handleSubmitEvent(e) {
     e.preventDefault();
-
     console.log(eventForm);
+
+    if(editText){
+      fetch(`events/${eventForm.id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(eventForm),
+      })
+        .then((r) => r.json())
+        .then((updatedItem) => console);
+
+    }
+    else {
     fetch("/events", {
       method: "POST",
       headers: {
@@ -48,21 +64,20 @@ export default function NewEvent({
           date: "",
           slots: "",
           details: "",
-          user_id: '',
+          user_id: "",
         });
+        setToggleCreate(!toggleCreate)
       } else {
-        r.json().then((error) => setError(Object.values(error)));
+        r.json().then((error) => setError(error.errors));
       }
     });
+  }
   }
 
   return (
     <div>
       <div className="d-flex justify-content-center  my-3">
-        <div
-          className="rounded"
-          style={{ backgroundColor: "#0D7CAC" }}
-        >
+        <div className="rounded" style={{ backgroundColor: "#0D7CAC" }}>
           <form className="col">
             <div className="container">
               <div className="row">
@@ -153,10 +168,10 @@ export default function NewEvent({
                     padding: "5px 40px",
                   }}
                 >
-                  Submit
+                  {editText ? "Edit" : "Submit"}
                 </button>
-                {errormessage}
               </div>
+              {errormessage}
             </div>
           </form>
         </div>

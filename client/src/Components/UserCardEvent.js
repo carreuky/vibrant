@@ -1,9 +1,8 @@
 import React, { useEffect, useState, Fragment } from "react";
 import EditForm from "./EditForm";
 
-export default function UserCardEvent({setEventEdit,eventEdit }) {
+export default function UserCardEvent({setEventForm,setToggleCreate,toggleCreate ,setEditText,editText}) {
   const [mine, setMine] = useState([]);
-  const [edit, setEdit] = useState(false);
   
 
   const yell = { color: "#FDFF00", fontWeight: "bold" };
@@ -22,9 +21,15 @@ export default function UserCardEvent({setEventEdit,eventEdit }) {
     });
   }, []);
 
+  function handleEdit(one){
+    setToggleCreate(!toggleCreate)
+    setEditText(true)
+    setEventForm(one);
+
+  }
+
   function handleDeleteClick(one) {
     let id = one.id;
-    console.log(id);
     fetch(`/events/${id}`, {
       method: "DELETE",
     });
@@ -34,9 +39,8 @@ export default function UserCardEvent({setEventEdit,eventEdit }) {
   return (
     <div className="m-5">
         {" "}
-        {edit ? <EditForm eventEdit={eventEdit} setEventEdit={setEventEdit} setEdit={setEdit} edit={edit} /> : ""}
+        {/* {edit ? <EditForm setEventForm={setEventForm} eventForm={eventForm} setEdit={setEdit} edit={edit} /> : ""} */}
         {mine?.map((one) => {
-          setEventEdit(one);
           return (
             <div key={one.id} className="card mt-4 ml-1 rounded ">
               <h5 className="card-header pl-2 ">{one.eventname}</h5>
@@ -46,7 +50,7 @@ export default function UserCardEvent({setEventEdit,eventEdit }) {
                     <h6 className="card-text text-white">{one.details}</h6>
                     <div>
                       <button
-                        onClick={() => setEdit(!edit)}
+                        onClick={() =>handleEdit(one) }
                         type="button"
                         style={{ backgroundColor: "white" }}
                         className="btn btn-btn-light "

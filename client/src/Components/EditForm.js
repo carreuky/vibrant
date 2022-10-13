@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export default function EditForm({ eventEdit,setEventEdit, setEdit, edit }) {
+export default function EditForm({ eventForm,setEventForm,setEdit,edit}) {
 
 //   const [patched, setPatched] = useState({
 //     eventname: "",
@@ -10,21 +10,21 @@ export default function EditForm({ eventEdit,setEventEdit, setEdit, edit }) {
 //     slots: "",
 //     details: "",
 //   });
-  console.log(eventEdit);
+  console.log(eventForm);
 
   function handleChange(e) {
     let name = e.target.name;
     let value = e.target.value;
 
-    setEventEdit({
-      ...eventEdit,
+    setEventForm({
+      ...eventForm,
       [name]: value,
     });
   }
 
   function handleSubmit() {
     // setEdit(!edit)}
-    fetch(`https:/events/${eventEdit.id}}`, {
+    fetch(`https:/events/${eventForm.id}}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -37,7 +37,7 @@ export default function EditForm({ eventEdit,setEventEdit, setEdit, edit }) {
   return (
     <div>
       <button
-        onClick={() => setEdit(!edit)}
+        // onClick={() => setEdit(!edit)}
         type="button"
         class="btn-close ml-5"
         aria-label="Close"
@@ -51,7 +51,7 @@ export default function EditForm({ eventEdit,setEventEdit, setEdit, edit }) {
                 type="text"
                 class="form-control"
                 name='eventname'
-                value={eventEdit.eventname}
+                value={eventForm.eventname}
                 onChange={handleChange}
                 id="exampleFormControlInput1"
                 placeholder="event name"
@@ -62,7 +62,7 @@ export default function EditForm({ eventEdit,setEventEdit, setEdit, edit }) {
               <input
                 type="number"
                 class="form-control"
-                value={eventEdit.fee}
+                value={eventForm.fee}
                 onChange={handleChange}
                 id="exampleFormControlInput1"
                 placeholder="fee"
@@ -76,7 +76,7 @@ export default function EditForm({ eventEdit,setEventEdit, setEdit, edit }) {
                 type="location"
                 class="form-control"
                 id="exampleFormControlInput1"
-                value={eventEdit.location}
+                value={eventForm.location}
                 onChange={handleChange}
                 placeholder="Location"
               />
@@ -89,7 +89,7 @@ export default function EditForm({ eventEdit,setEventEdit, setEdit, edit }) {
                 id="exampleFormControlInput1"
                 placeholder="slots"
                 onChange={handleChange}
-                value={eventEdit.slots}
+                value={eventForm.slots}
               />
             </div>
           </div>
@@ -102,7 +102,7 @@ export default function EditForm({ eventEdit,setEventEdit, setEdit, edit }) {
                 id="exampleFormControlInput1"
                 placeholder="slots"
                 onChange={handleChange}
-                value={eventEdit.date}
+                value={eventForm.date}
               />
             </div>
           </div>
@@ -112,7 +112,7 @@ export default function EditForm({ eventEdit,setEventEdit, setEdit, edit }) {
               class="form-control"
               id="exampleFormControlTextarea1"
               rows="3"
-              value={eventEdit.details}
+              value={eventForm.details}
               onChange={handleChange}
             ></textarea>
           </div>
