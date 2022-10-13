@@ -9,7 +9,7 @@ export default function NewEvent({
   toggleCreate,
 }) {
   const [error, setError] = useState();
-    console.log(eventForm.id)
+  console.log(eventForm.id);
   function handleChange(e) {
     console.log(eventForm);
     let name = e.target.name;
@@ -29,49 +29,59 @@ export default function NewEvent({
     );
   });
 
-
-
   function handleSubmitEvent(e) {
     e.preventDefault();
     console.log(eventForm);
 
-    if(editText){
+    if (editText) {
       fetch(`events/${eventForm.id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(eventForm),
-      })
-        .then((r) => r.json())
-        .then((updatedItem) => console);
-
+      }).then((r) => {
+        if (r.ok) {
+          r.json().then((event) => console.log(event));
+          setEventForm({
+            eventname: "",
+            fee: "",
+            location: "",
+            date: "",
+            slots: "",
+            details: "",
+            user_id: "",
+          });
+          setToggleCreate(!toggleCreate);
+        } else {
+          r.json().then((error) => setError(error.errors));
+        }
+      });
+    } else {
+      fetch("/events", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(eventForm),
+      }).then((r) => {
+        if (r.ok) {
+          r.json().then((event) => console.log(event));
+          setEventForm({
+            eventname: "",
+            fee: "",
+            location: "",
+            date: "",
+            slots: "",
+            details: "",
+            user_id: "",
+          });
+          setToggleCreate(!toggleCreate);
+        } else {
+          r.json().then((error) => setError(error.errors));
+        }
+      });
     }
-    else {
-    fetch("/events", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(eventForm),
-    }).then((r) => {
-      if (r.ok) {
-        r.json().then((event) => console.log(event));
-        setEventForm({
-          eventname: "",
-          fee: "",
-          location: "",
-          date: "",
-          slots: "",
-          details: "",
-          user_id: "",
-        });
-        setToggleCreate(!toggleCreate)
-      } else {
-        r.json().then((error) => setError(error.errors));
-      }
-    });
-  }
   }
 
   return (

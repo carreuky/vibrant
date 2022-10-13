@@ -1,5 +1,8 @@
 class EventsController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :render_unproccessable_entity_response
+    rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
+
+
     def index 
         r=Event.all
         render json: r
@@ -12,6 +15,12 @@ class EventsController < ApplicationController
     def create
         event = Event.create!(event_params)
         render json: event,status: :ok
+    end
+
+    def update
+        event = Event.find_by(id: params[:id])
+        event.update(event_params)
+        render json: event
     end
 
     def destroy
@@ -29,6 +38,10 @@ class EventsController < ApplicationController
     private
     def event_params
         params.permit(:eventname, :fee, :location, :date, :slots, :details, :user_id)
+    end
+
+    def render_not_found_response
+        render json: { error: "User not found" }, status: :not_found
     end
 
     def render_unproccessable_entity_response(invalid)
