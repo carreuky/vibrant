@@ -21,6 +21,7 @@ export default function Events() {
     );
   });
 
+  
   const view = events.map((eve) => {
 
     return (
@@ -40,7 +41,6 @@ export default function Events() {
   }, []);
 
   function handleChange(e) {
-    console.log(formData);
     let name = e.target.name;
     let value = e.target.value;
 
@@ -49,14 +49,11 @@ export default function Events() {
       [name]: value,
     });
   }
-
   function decreaseSlots(event) {
-    console.log(event.slots - 1)
     const id =event.id
     const obj={
       slots: event.slots - 1
     }
-
     fetch(`/events/${id}`, {
       method: "PATCH",
       headers: {
@@ -65,20 +62,18 @@ export default function Events() {
       body: JSON.stringify(obj),
     })
       .then((r) => r.json())
-      .then((event) =>console.log(event));
+      .then((event) =>updateList(event));
   }
 
   function handleSubmit(e) {
     e.preventDefault();
 
     let data = formData;
-    console.log(data);
 
     const result = events.filter(event => event.id == data.event_id);
     const theEvent =result[0]
 
     decreaseSlots(theEvent)
-    console.log(theEvent.id)
 
     fetch("/attendees", {
       method: "POST",

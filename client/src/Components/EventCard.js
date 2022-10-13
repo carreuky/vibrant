@@ -15,6 +15,7 @@ export default function EventCard({ eachEvent, onBookingRequest }) {
                 <button
                   onClick={() => onBookingRequest(eachEvent.id)}
                   type="button"
+                  disabled={eachEvent.slots===0}
                   style={{ backgroundColor: "#FF6D28" , border: 'none' }}
                   class="btn btn-primary text-black"
                   data-bs-toggle="modal"
