@@ -6,8 +6,7 @@ export default function SignUp() {
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
   const [error, setError] = useState();
-  console.log(error);
-
+  const [success, setSuccess] = useState()
   const userToDB = { username, password, passwordConfirmation };
   const colorTxt = {
     color: "#0D7CAC",
@@ -34,7 +33,10 @@ export default function SignUp() {
       body: JSON.stringify(userToDB),
     }).then((r) => {
       if (r.ok) {
-        r.json().then((user) => user);
+        r.json().then((user) => setSuccess((user.success)));
+        setUsername('')
+        setPassword('')
+        setPasswordConfirmation('')
       } else {
         r.json().then((error) => setError((error.errors)));
       }
@@ -107,6 +109,7 @@ export default function SignUp() {
                   />
                 </div>
                 <div className="text-center text-lg-start">
+                <p className="text-success">{success}</p>
                   <button
                     onClick={handleSubmit}
                     type="button"

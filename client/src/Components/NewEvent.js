@@ -31,7 +31,6 @@ export default function NewEvent({
 
   function handleSubmitEvent(e) {
     e.preventDefault();
-    console.log(eventForm);
 
     if (editText) {
       fetch(`events/${eventForm.id}`, {
@@ -42,7 +41,7 @@ export default function NewEvent({
         body: JSON.stringify(eventForm),
       }).then((r) => {
         if (r.ok) {
-          r.json().then((event) => console.log(event));
+          r.json().then((event) =>(event));
           setEventForm({
             eventname: "",
             fee: "",

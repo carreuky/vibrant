@@ -7,8 +7,8 @@ class UsersController < ApplicationController
 
     def create
         user = User.create!(user_params)
-        session[:user_id] = user.id
-        render json: user, status: :created
+        # session[:user_id] = user.id
+        render json: {success:'Successfully created'}, status: :created
     end
 
     def show
