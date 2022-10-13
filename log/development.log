@@ -27965,3 +27965,11 @@ Processing by UsersController#show as */*
 Completed 200 OK in 17ms (Views: 9.2ms | ActiveRecord: 1.3ms | Allocations: 1853)
 
 
+Started GET "/events" for 127.0.0.1 at 2022-10-13 23:32:14 +0300
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.8ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.4ms | Allocations: 2724)
+
+

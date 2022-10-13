@@ -21,7 +21,16 @@ export default function Events() {
     );
   });
 
-  
+  function updateList(updatedItem) {
+    const updatedItems = events.map((eve) => {
+      if (eve.id === updatedItem.id) {
+        return updatedItem;
+      } else {
+        return eve;
+      }
+    });
+    setEvents(updatedItems);
+  }
   const view = events.map((eve) => {
 
     return (
