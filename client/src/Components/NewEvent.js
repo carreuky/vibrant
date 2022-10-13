@@ -1,114 +1,162 @@
 import React, { useState } from "react";
 
-export default function NewEvent() {
-  const [eventname, setEventName] = useState("");
-  const [fee, setFee] = useState("");
-  const [location, setLocation] = useState("");
-  const [date, setDate] = useState("");
-  const [slots, setSlots] = useState("");
-  const [details, setDetails] = useState("");
+export default function NewEvent({
+  user_id,
+  setEventForm,
+  eventForm,
+  eventEdit,
+}) {
+  const [error, setError] = useState();
 
-  const eventToDB = { eventname, fee, location, date, slots, details };
+  console.log(eventEdit);
+  function handleChange(e) {
+    console.log(eventForm);
+    let name = e.target.name;
+    let value = e.target.value;
 
-  // console.log(eventToDB)
-  function handleSubmitEvent() {
-    console.log(eventToDB);
-    setEventName('')
-    setFee('')
-    setLocation('')
-    setDate('')
-    setSlots('')
-    setDetails('')
+    setEventForm({
+      ...eventForm,
+      [name]: value,
+    });
+  }
+
+  const errormessage = error?.map((error) => {
+    return (
+      <>
+        <li className="text-danger pt-3">{error}</li>
+      </>
+    );
+  });
+
+  function handleSubmitEvent(e) {
+    e.preventDefault();
+
+    console.log(eventForm);
+    fetch("/events", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(eventForm),
+    }).then((r) => {
+      if (r.ok) {
+        r.json().then((event) => console.log(event));
+        setEventForm({
+          eventname: "",
+          fee: "",
+          location: "",
+          date: "",
+          slots: "",
+          details: "",
+          user_id: '',
+        });
+      } else {
+        r.json().then((error) => setError(Object.values(error)));
+      }
+    });
   }
 
   return (
     <div>
-      <div className="d-flex justify-content-center ">
+      <div className="d-flex justify-content-center  my-3">
         <div
-          className="col-lg-4 col-sm-6 col-xs-8 m-2 p-3 py-4 rounded"
+          className="rounded"
           style={{ backgroundColor: "#0D7CAC" }}
         >
-          <form className="">
-            <div className="form-outline mb-3  ">
-              <input
-                onChange={(e) => setEventName(e.target.value)}
-                type="text"
-                id="form3Example3"
-                value={eventname}
-                className="form-control form-control-lg "
-                placeholder="event name"
-              />
-            </div>
-            <div className="form-outline mb-3  ">
-              <input
-                onChange={(e) => setFee(e.target.value)}
-                type="number"
-                id="form3Example3"
-                value={fee}
-                className="form-control form-control-lg "
-                placeholder="entry fee"
-              />
-            </div>
-            <div className="form-outline mb-3  ">
-              <input
-                onChange={(e) => setLocation(e.target.value)}
-                type="text"
-                id="form3Example3"
-                value={location}
-                className="form-control form-control-lg "
-                placeholder="location"
-              />
-            </div>
-
-            <div className="form-outline mb-3 ">
-              <input
-                onChange={(e) => setDate(e.target.value)}
-                type="date"
-                value={date}
-                id="form3Example4"
-                className="form-control form-control-lg"
-                placeholder="event date"
-              />
-            </div>
-
-            <div className="form-outline mb-3 ">
-              <input
-                type="number"
-                id="form3Example4"
-                value={slots}
-                onChange={(e) => setSlots(e.target.value)}
-                className="form-control form-control-lg"
-                placeholder="slots available"
-              />
-            </div>
-
-            <div className="form-outline mb-3 ">
-              <textarea
-                onChange={(e) => setDetails(e.target.value)}
-                className="form-control"
-                value={details}
-                type="text"
-                id="exampleFormControlTextarea1"
-                rows="3"
-                placeholder="details"
-              ></textarea>
-            </div>
-            <div className="text-center text-lg-start mb-3 text-black">
-              <button
-                type="button"
-                onClick={handleSubmitEvent}
-                className="btn btn-lg text-white"
-                style={{
-                  border: "none",
-                  paddingRight: "2.5rem",
-                  backgroundColor: "orange",
-
-                  fontSize: "18px",
-                  padding: "5px 40px",
-                }}
-              >
-                Submit
-              </button>
+          <form className="col">
+            <div className="container">
+              <div className="row">
+                <div className="form-group col-sm">
+                  <label for="exampleFormControlInput1">Event name</label>
+                  <input
+                    onChange={handleChange}
+                    type="text"
+                    value={eventForm.eventname}
+                    name="eventname"
+                    className="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="event name"
+                  />
+                </div>
+                <div className="form-group col-sm">
+                  <label for="exampleFormControlInput1">Fee</label>
+                  <input
+                    type="number"
+                    className="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="fee"
+                    onChange={handleChange}
+                    value={eventForm.fee}
+                    name="fee"
+                  />
+                </div>
+              </div>
+              <div className="row">
+                <div className="form-group col-sm">
+                  <label for="exampleFormControlInput1">Location</label>
+                  <input
+                    onChange={handleChange}
+                    value={eventForm.location}
+                    name="location"
+                    className="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="Location"
+                  />
+                </div>
+                <div className="form-group col-sm">
+                  <label for="exampleFormControlInput1">Slots</label>
+                  <input
+                    value={eventForm.slots}
+                    onChange={handleChange}
+                    name="slots"
+                    type="number"
+                    className="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="slots"
+                  />
+                </div>
+              </div>
+              <div className="row">
+                <div className="form-group col-sm">
+                  <label for="exampleFormControlInput1">Date</label>
+                  <input
+                    onChange={handleChange}
+                    value={eventForm.date}
+                    name="date"
+                    type="date"
+                    className="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="slots"
+                  />
+                </div>
+              </div>
+              <div className="form-group mt-2 col-sm">
+                <label for="exampleFormControlTextarea1">Details</label>
+                <textarea
+                  onChange={handleChange}
+                  value={eventForm.details}
+                  name="details"
+                  className="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                ></textarea>
+              </div>
+              <div className="text-center text-lg-start my-3 text-black">
+                <button
+                  type="button"
+                  onClick={handleSubmitEvent}
+                  Name="btn btn-lg text-white"
+                  style={{
+                    border: "none",
+                    backgroundColor: "orange",
+                    fontSize: "18px",
+                    padding: "5px 40px",
+                  }}
+                >
+                  Submit
+                </button>
+                {errormessage}
+              </div>
             </div>
           </form>
         </div>

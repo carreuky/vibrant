@@ -5,7 +5,8 @@ export default function SignUp() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
-  const[imerudi, setImerudi]=useState()
+  const [error, setError] = useState();
+  console.log(error);
 
   const userToDB = { username, password, passwordConfirmation };
   const colorTxt = {
@@ -13,9 +14,13 @@ export default function SignUp() {
     textDecoration: "none",
   };
 
-
-  console.log(userToDB);
-  console.log(imerudi)
+  const errormessage = error?.map((error) => {
+    return (
+      <>
+        <li className="text-danger pt-3">{error}</li>
+      </>
+    );
+  });
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -27,13 +32,11 @@ export default function SignUp() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(userToDB),
-    })
-    .then((r) => {
+    }).then((r) => {
       if (r.ok) {
-        r.json().then((user) => setImerudi(user));
-      }
-      else{
-        console.log('error')
+        r.json().then((user) => user);
+      } else {
+        r.json().then((error) => setError((error.errors)));
       }
     });
   }
@@ -119,6 +122,7 @@ export default function SignUp() {
                   >
                     Sign Up
                   </button>
+                  <ol>{errormessage}</ol>
                 </div>
               </form>
             </div>

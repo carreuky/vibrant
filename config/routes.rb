@@ -6,11 +6,13 @@ Rails.application.routes.draw do
 
   post "/signup", to: "users#create"
   get "/me", to: "users#show"
+  patch "/events/:id/slots", to: "events#decrement_slots"
+
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
-   resources :users
-
-  resources :events, only: [:index]
+  resources :users
+  resources :attendees
+  resources :events
 
 
 

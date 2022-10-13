@@ -2,9 +2,19 @@ import React, { useState, useEffect } from "react";
 import UserCardEvent from "./UserCardEvent";
 import NewEvent from "./NewEvent";
 
-export default function Userpage({user}) {
-  const [toggleCreate, setToggleCreate] = useState(false);
-  const [mine, setMine] = useState();
+export default function Userpage({ user }) {
+  const [toggleCreate, setToggleCreate]=useState(false)
+  const [eventForm,setEventForm]=useState({
+    eventname:'',
+    fee:'',
+    location:'',
+    date:'',
+    slots:'',
+    details:'',
+    user_id: user.id
+  })
+  const [eventEdit,setEventEdit]=useState()
+
 
   const colorTxt = {
     color: "#0D7CAC",
@@ -52,7 +62,7 @@ export default function Userpage({user}) {
           </div>
         )}
       </div>
-      {toggleCreate ? <NewEvent /> : <UserCardEvent myevents={user.events} />}
+     {toggleCreate ?<NewEvent setEventForm={setEventForm} eventEdit={eventEdit} eventForm={eventForm}/>:<UserCardEvent  setEventEdit={setEventEdit} eventEdit={eventEdit}/>} 
     </div>
   );
 }

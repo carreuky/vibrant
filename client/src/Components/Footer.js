@@ -6,7 +6,7 @@ export default function Footer() {
     color: "black",
   };
   return (
-    <div className="pt-4 pb-2" style={{ backgroundColor: "#0D7CAC" }}>
+    <div className="pt-4 pb-2 footer" style={{ backgroundColor: "#0D7CAC" }}>
       <div className="container-fluid text-center ">
         <div className="row">
           <div className="col-md-4 col-xs-12">
@@ -21,10 +21,10 @@ export default function Footer() {
                 <FaFacebook />
               </a>
 
-              <a href="facebook" className="mx-3" style={black}>
+              <a href="" className="mx-3" style={black}>
                 <FaTwitter />
               </a>
-              <a href="facebook" className="mx-3" style={black}>
+              <a href="https://github.com/carreuky" className="mx-3" style={black}>
                 <FaGithub />
               </a>
               <a href="facebook" className="mx-3" style={black}>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState ,useEffect} from "react";
 import Navbar from "./Components/Navbar";
 import { Switch, Route } from "react-router-dom";
 import SignUp from "./Components/SignUp";
@@ -22,7 +22,7 @@ function App() {
       {user ? (
         <Switch>
           <Route path="/">
-            <Userpage user={user} />
+            <Userpage user={user}/>
           </Route>
         </Switch>
       ) : (

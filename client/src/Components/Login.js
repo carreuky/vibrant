@@ -8,8 +8,12 @@ export default function Login({ setUser }) {
     color: "#0D7CAC",
     textDecoration: "none",
   };
+<<<<<<< HEAD
   console.log(error);
   
+=======
+
+>>>>>>> 37fc766e503270d4773eea673a7d31e066bb52ae
   const errormessage = error?.map((error) => {
     return (
       <>
@@ -17,7 +21,12 @@ export default function Login({ setUser }) {
       </>
     );
   });
+<<<<<<< HEAD
   console.log(errormessage)
+=======
+
+
+>>>>>>> 37fc766e503270d4773eea673a7d31e066bb52ae
   const loginDetails = { username, password };
   function handleSubmit(e) {
     e.preventDefault();
@@ -38,7 +47,6 @@ export default function Login({ setUser }) {
   return (
     <div>
       <section className="vh-60 m-5">
-        {/* <h3 style={{fontWeight:'300'}} className="text-center"></h3> */}
         <div className="container-fluid h-custom">
           <div className="row d-flex justify-content-center align-items-center h-80">
             <div className="col-md-9 col-lg-6 col-xl-5">

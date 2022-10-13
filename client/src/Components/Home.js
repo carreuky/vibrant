@@ -45,7 +45,7 @@ export default function Home() {
                   fontWeight: "900",
                 }}
               >
-                <Link style={colorTxt}>Explore Events</Link>
+                <Link to="/events"  style={colorTxt}>Explore Events</Link>
               </button>
             </div>
           </div>

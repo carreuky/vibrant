@@ -13,7 +13,6 @@ export default function Navbar({ user, setUser }) {
     fetch("/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
         setUser(null);
-        window.location.reload();
       }
     });
   }
