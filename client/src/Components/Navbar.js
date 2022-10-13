@@ -103,7 +103,7 @@ export default function Navbar({ user, setUser }) {
                   <Link to="/signup" style={{ textDecoration: "none" }}>
                     <a
                       href="#contact"
-                      className="nav-link bg-primary text-white px-4 rounded"
+                      className="nav-link  text-white px-4 rounded"
                       style={{
                         backgroundColor: "#0D7CAC",
                         fontSize: "18px",

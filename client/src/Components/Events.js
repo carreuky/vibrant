@@ -32,7 +32,6 @@ export default function Events() {
     setEvents(updatedItems);
   }
   const view = events.map((eve) => {
-
     return (
       <EventCard
         eachEvent={eve}
@@ -59,10 +58,10 @@ export default function Events() {
     });
   }
   function decreaseSlots(event) {
-    const id =event.id
-    const obj={
-      slots: event.slots - 1
-    }
+    const id = event.id;
+    const obj = {
+      slots: event.slots - 1,
+    };
     fetch(`/events/${id}`, {
       method: "PATCH",
       headers: {
@@ -71,7 +70,7 @@ export default function Events() {
       body: JSON.stringify(obj),
     })
       .then((r) => r.json())
-      .then((event) =>updateList(event));
+      .then((event) => updateList(event));
   }
 
   function handleSubmit(e) {
@@ -79,10 +78,10 @@ export default function Events() {
 
     let data = formData;
 
-    const result = events.filter(event => event.id == data.event_id);
-    const theEvent =result[0]
+    const result = events.filter((event) => event.id == data.event_id);
+    const theEvent = result[0];
 
-    decreaseSlots(theEvent)
+    decreaseSlots(theEvent);
 
     fetch("/attendees", {
       method: "POST",
@@ -183,7 +182,9 @@ export default function Events() {
       </div>
 
       <div className="text-center">
-        <h1 className="display-6">LETS CONNECT, LEARN AND SHARE IDEAS.</h1>
+        <h1 className="display-6" style={{ fontWeight: "400" }}>
+          LETS CONNECT, LEARN AND SHARE IDEAS.
+        </h1>
         <h5 className="" style={{ color: "#0D7CAC" }}>
           Don’t be left out reserve a ticket by booking an event
         </h5>
