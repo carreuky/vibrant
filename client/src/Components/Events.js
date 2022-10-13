@@ -155,7 +155,7 @@ export default function Events() {
 
       <div className="text-center">
         <h1 className="display-6">LETS CONNECT, LEARN AND SHARE IDEAS.</h1>
-        <h5>Don’t be left out reserve a ticket by booking an event</h5>
+        <h5 className="" style={{color:'#0D7CAC'}}>Don’t be left out reserve a ticket by booking an event</h5>
       </div>
 
       <div className="container">

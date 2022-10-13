@@ -21,10 +21,10 @@ export default function Footer() {
                 <FaFacebook />
               </a>
 
-              <a href="facebook" className="mx-3" style={black}>
+              <a href="" className="mx-3" style={black}>
                 <FaTwitter />
               </a>
-              <a href="facebook" className="mx-3" style={black}>
+              <a href="https://github.com/carreuky" className="mx-3" style={black}>
                 <FaGithub />
               </a>
               <a href="facebook" className="mx-3" style={black}>
