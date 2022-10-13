@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import Navbar from "./Components/Navbar";
 import { Switch, Route } from "react-router-dom";
 import SignUp from "./Components/SignUp";
@@ -10,7 +10,15 @@ import Userpage from "./Components/Userpage";
 
 function App() {
   const [user, setUser] = useState(null);
-  console.log(user);
+
+  useEffect(() => {
+    fetch("/me").then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user));
+        
+      }
+    });
+  }, []);
 
 
   return (
@@ -19,7 +27,7 @@ function App() {
       {user ? (
         <Switch>
           <Route path="/">
-            <Userpage user={user} />
+            <Userpage user={user}/>
           </Route>
         </Switch>
       ) : (

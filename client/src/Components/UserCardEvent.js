@@ -17,6 +17,7 @@ export default function UserCardEvent({setEventEdit,eventEdit }) {
     fetch("/me").then((r) => {
       if (r.ok) {
         r.json().then((user) => setMine(user.events));
+        
       }
     });
   }, []);
@@ -33,7 +34,7 @@ export default function UserCardEvent({setEventEdit,eventEdit }) {
   return (
     <div className="m-5">
         {" "}
-        {edit ? <EditForm eventEdit={eventEdit} setEdit={setEdit} edit={edit} /> : ""}
+        {edit ? <EditForm eventEdit={eventEdit} setEventEdit={setEventEdit} setEdit={setEdit} edit={edit} /> : ""}
         {mine?.map((one) => {
           setEventEdit(one);
           return (

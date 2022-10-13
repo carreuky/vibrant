@@ -14,7 +14,6 @@ export default function Userpage({ user }) {
     user_id: user.id
   })
   const [eventEdit,setEventEdit]=useState()
-  console.log(eventEdit)
 
 
   const colorTxt = {
@@ -51,7 +50,7 @@ export default function Userpage({ user }) {
             </label>
         </div>
       </div>
-     {toggleCreate ?<NewEvent setEventForm={setEventForm} eventEdit={eventEdit}    eventForm={eventForm}/>:<UserCardEvent  setEventEdit={setEventEdit} eventEdit={eventEdit}/>} 
+     {toggleCreate ?<NewEvent setEventForm={setEventForm} eventEdit={eventEdit} eventForm={eventForm}/>:<UserCardEvent  setEventEdit={setEventEdit} eventEdit={eventEdit}/>} 
     </div>
   );
 }

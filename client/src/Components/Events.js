@@ -3,8 +3,8 @@ import EventCard from "./EventCard";
 
 export default function Events() {
   const [events, setEvents] = useState([]);
-  const [success,setSuccess] = useState()
-  
+  const [success, setSuccess] = useState();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -19,7 +19,7 @@ export default function Events() {
       </>
     );
   });
-  
+
   const view = events.map((eve) => {
     return (
       <EventCard
@@ -48,32 +48,29 @@ export default function Events() {
     });
   }
 
-  function decreaseSlots(){
-    
-  }
+  function decreaseSlots() {}
 
   function handleSubmit(e) {
     let name = e.target.name;
     e.preventDefault();
 
-    let data=formData
-    console.log(data)
-
+    let data = formData;
+    console.log(data);
 
     fetch("/attendees", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }).then((r) => {
-          if (r.ok) {
-            r.json().then((event) => setSuccess(Object.values(event)));
-          }
-           else {
-            r.json().then((error) => console.log(Object.values(error)));
-          }
-        });
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((r) => {
+      if (r.ok) {
+        r.json().then((event) => setSuccess(Object.values(event)));
+        setFormData({ name: "", email: "", phonenumber: "", event_id: "" });
+      } else {
+        r.json().then((error) => console.log(Object.values(error)));
+      }
+    });
   }
 
   return (

@@ -48,7 +48,7 @@ export default function NewEvent({
           date: "",
           slots: "",
           details: "",
-          user_id: user_id,
+          user_id: '',
         });
       } else {
         r.json().then((error) => setError(Object.values(error)));
@@ -66,23 +66,23 @@ export default function NewEvent({
           <form className="col">
             <div className="container">
               <div className="row">
-                <div class="form-group col-sm">
+                <div className="form-group col-sm">
                   <label for="exampleFormControlInput1">Event name</label>
                   <input
                     onChange={handleChange}
                     type="text"
                     value={eventForm.eventname}
                     name="eventname"
-                    class="form-control"
+                    className="form-control"
                     id="exampleFormControlInput1"
                     placeholder="event name"
                   />
                 </div>
-                <div class="form-group col-sm">
+                <div className="form-group col-sm">
                   <label for="exampleFormControlInput1">Fee</label>
                   <input
                     type="number"
-                    class="form-control"
+                    className="form-control"
                     id="exampleFormControlInput1"
                     placeholder="fee"
                     onChange={handleChange}
@@ -92,51 +92,51 @@ export default function NewEvent({
                 </div>
               </div>
               <div className="row">
-                <div class="form-group col-sm">
+                <div className="form-group col-sm">
                   <label for="exampleFormControlInput1">Location</label>
                   <input
                     onChange={handleChange}
                     value={eventForm.location}
                     name="location"
-                    class="form-control"
+                    className="form-control"
                     id="exampleFormControlInput1"
                     placeholder="Location"
                   />
                 </div>
-                <div class="form-group col-sm">
+                <div className="form-group col-sm">
                   <label for="exampleFormControlInput1">Slots</label>
                   <input
                     value={eventForm.slots}
                     onChange={handleChange}
                     name="slots"
                     type="number"
-                    class="form-control"
+                    className="form-control"
                     id="exampleFormControlInput1"
                     placeholder="slots"
                   />
                 </div>
               </div>
               <div className="row">
-                <div class="form-group col-sm">
+                <div className="form-group col-sm">
                   <label for="exampleFormControlInput1">Date</label>
                   <input
                     onChange={handleChange}
                     value={eventForm.date}
                     name="date"
                     type="date"
-                    class="form-control"
+                    className="form-control"
                     id="exampleFormControlInput1"
                     placeholder="slots"
                   />
                 </div>
               </div>
-              <div class="form-group mt-2 col-sm">
+              <div className="form-group mt-2 col-sm">
                 <label for="exampleFormControlTextarea1">Details</label>
                 <textarea
                   onChange={handleChange}
                   value={eventForm.details}
                   name="details"
-                  class="form-control"
+                  className="form-control"
                   id="exampleFormControlTextarea1"
                   rows="3"
                 ></textarea>
@@ -145,10 +145,9 @@ export default function NewEvent({
                 <button
                   type="button"
                   onClick={handleSubmitEvent}
-                  className="btn btn-lg text-white"
+                  Name="btn btn-lg text-white"
                   style={{
                     border: "none",
-                    paddingRight: "2.5rem",
                     backgroundColor: "orange",
                     fontSize: "18px",
                     padding: "5px 40px",
