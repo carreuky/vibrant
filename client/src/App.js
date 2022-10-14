@@ -37,7 +37,7 @@ function App() {
           <Route path="/login">
             <Login setUser={setUser} />
           </Route>
-          <Route path="/events">
+          <Route path="/event">
             <Events />
           </Route>
           <Route path="/">

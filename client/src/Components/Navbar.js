@@ -86,7 +86,7 @@ export default function Navbar({ user, setUser }) {
                 </li>
                 <li className="nav-item  mx-3">
                   <a href="#products" className="nav-link" style={colorTxt}>
-                    <Link to="/events" style={{ textDecoration: "none" }}>
+                    <Link to="/event" style={{ textDecoration: "none" }}>
                       Events
                     </Link>
                   </a>
