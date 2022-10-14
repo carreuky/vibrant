@@ -3,8 +3,9 @@ import EventCard from "./EventCard";
 
 export default function Events() {
   const [events, setEvents] = useState([]);
-  const [success, setSuccess] = useState();
-  const [error, setError] = useState();
+  // const [mutated,setMutated] =useState([])
+  // const [success, setSuccess] = useState();
+  // const [error, setError] = useState();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -13,13 +14,13 @@ export default function Events() {
     event_id: "",
   });
 
-  const successmessage = error?.map((error) => {
-    return (
-      <>
-        <p className="text-danger pt-3">{error}</p>
-      </>
-    );
-  });
+  // const successmessage = error?.map((error) => {
+  //   return (
+  //     <>
+  //       <p className="text-danger pt-3">{error}</p>
+  //     </>
+  //   );
+  // });
 
   function updateList(updatedItem) {
     const updatedItems = events.map((eve) => {
@@ -45,6 +46,7 @@ export default function Events() {
       .then((r) => r.json())
       .then((data) => {
         setEvents(data);
+        // setMutated(data)
       });
   }, []);
 
@@ -78,7 +80,7 @@ export default function Events() {
 
     let data = formData;
 
-    const result = events.filter((event) => event.id == data.event_id);
+    const result = events.filter((event) => event.id ===  data.event_id);
     const theEvent = result[0];
 
     decreaseSlots(theEvent);
@@ -182,7 +184,7 @@ export default function Events() {
       </div>
 
       <div className="text-center">
-        <h1 className="display-6" style={{ fontWeight: "400" }}>
+        <h1 className="display-6 p-2" style={{ fontWeight: "400" }}>
           LETS CONNECT, LEARN AND SHARE IDEAS.
         </h1>
         <h5 className="" style={{ color: "#0D7CAC" }}>

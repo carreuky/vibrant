@@ -6,6 +6,7 @@ export default function Userpage({ user }) {
   const [toggleCreate, setToggleCreate] = useState(false);
   const [mine, setMine] = useState([]);
   const [mutated, setMutated]=useState([])
+  // const [notfound, setNotFound]=useState(FaBullseye)
 
 
   const [eventForm, setEventForm] = useState({
@@ -36,6 +37,7 @@ export default function Userpage({ user }) {
     if(searchedEvents !==0){
       setMine(searchedEvents)
     }
+  
  
   }
   return (
@@ -67,6 +69,7 @@ export default function Userpage({ user }) {
           </label>
         </div>
       </div>
+      {/* <p>{notfound? 'Record not found':''}</p> */}
       {/* {edit ? <EditForm setEventForm={setEventForm} eventForm={eventForm} setEdit={setEdit} edit={edit} /> : ""} */}
       {toggleCreate ? (
         <NewEvent

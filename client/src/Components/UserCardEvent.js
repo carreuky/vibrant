@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Fragment } from "react";
+import React, { useEffect } from "react";
 
 export default function UserCardEvent({
   setEventForm,

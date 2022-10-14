@@ -48,16 +48,15 @@ export default function Navbar({ user, setUser }) {
             {user ? (
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item  mx-3">
-                  <a href="" className="nav-link" style={colorTxt}>
+                  <p  className="nav-link" style={colorTxt}>
                     <span style={{ textDecoration: "none" }}>
                       {user.username.toUpperCase()}
                     </span>
-                  </a>
+                  </p>
                 </li>
                 <li className="nav-item  mx-3">
-                  <a
+                  <p
                     onClick={logOut}
-                    href=""
                     className="nav-link bg-primary text-white px-4 rounded"
                     style={{
                       backgroundColor: "#0D7CAC",
@@ -73,17 +72,17 @@ export default function Navbar({ user, setUser }) {
                     >
                       Log Out
                     </Link>
-                  </a>
+                  </p>
                 </li>
               </ul>
             ) : (
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item  mx-3">
-                  <a href="" className="nav-link" style={colorTxt}>
+                  <p href="" className="nav-link" style={colorTxt}>
                     <Link to="/" style={{ textDecoration: "none" }}>
                       Home{" "}
                     </Link>
-                  </a>
+                  </p>
                 </li>
                 <li className="nav-item  mx-3">
                   <a href="#products" className="nav-link" style={colorTxt}>

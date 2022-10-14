@@ -44,7 +44,7 @@ export default function SignUp() {
   }
   return (
     <div>
-      <section className="vh-60 m-5">
+      <section className="vh-60 m-5 m-5">
         <h3
           style={{ fontWeight: "400", color: "#0D7CAC" }}
           className="text-center"
