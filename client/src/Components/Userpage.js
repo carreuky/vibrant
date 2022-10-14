@@ -5,9 +5,8 @@ import NewEvent from "./NewEvent";
 export default function Userpage({ user }) {
   const [toggleCreate, setToggleCreate] = useState(false);
   const [mine, setMine] = useState([]);
-  const [mutated, setMutated]=useState([])
+  const [mutated, setMutated] = useState([]);
   // const [notfound, setNotFound]=useState(FaBullseye)
-
 
   const [eventForm, setEventForm] = useState({
     eventname: "",
@@ -26,7 +25,7 @@ export default function Userpage({ user }) {
     fontWeight: "300",
   };
   function searchHandle(value) {
-    console.log(value)
+    console.log(value);
     const searchedEvents = mutated.filter(
       (mem) =>
         mem.eventname.toLowerCase().includes(value.toLowerCase()) ||
@@ -34,17 +33,46 @@ export default function Userpage({ user }) {
         mem.date.toLowerCase().includes(value.toLowerCase())
     );
 
-    if(searchedEvents !==0){
-      setMine(searchedEvents)
+    if (searchedEvents !== 0) {
+      setMine(searchedEvents);
     }
-  
- 
   }
   return (
     <div>
       <h4 style={colorTxt} className=" px-5">
         Welcome {user.username.charAt(0).toUpperCase() + user.username.slice(1)}
       </h4>
+      <div class="row mx-4 d-flex justify-content-between ">
+        {/* <div class="col-sm-8">
+          {" "}
+          <li
+            onClick={() => setToggleCreate(!toggleCreate)}
+            type="button"
+            className="btn btn-lg"
+            style={{
+              border: "none",
+              color: "white",
+              backgroundColor: "#0D7CAC",
+              fontSize: "15px",
+              fontWeight: "300",
+            }}
+          >
+            {toggleCreate ? "View Your New Events" : "Create Event"}
+          </li>{" "}
+        </div> */}
+        {/* <div class="col-sm-4 ml-5">
+          {" "}
+          <input
+            onChange={(e) => searchHandle(e.target.value)}
+            type="search"
+            id="form1"
+            className="form-control"
+          />
+          <label className="" for="form1">
+            Search
+          </label>
+        </div> */}
+      </div>
       <div className="mx-5 mt-4 d-flex justify-content-between ">
         <div>
           <li
@@ -62,8 +90,14 @@ export default function Userpage({ user }) {
             {toggleCreate ? "View Your New Events" : "Create Event"}
           </li>
         </div>
+
         <div className="">
-          <input onChange={(e)=>searchHandle(e.target.value)} type="search" id="form1" className="form-control" />
+          <input
+            onChange={(e) => searchHandle(e.target.value)}
+            type="search"
+            id="form1"
+            className="form-control"
+          />
           <label className="" for="form1">
             Search
           </label>
@@ -81,9 +115,9 @@ export default function Userpage({ user }) {
         />
       ) : (
         <UserCardEvent
-        setMutated={setMutated}
-        mine={mine}
-        setMine={setMine}
+          setMutated={setMutated}
+          mine={mine}
+          setMine={setMine}
           setEditText={setEditText}
           editText={editText}
           setEventForm={setEventForm}
