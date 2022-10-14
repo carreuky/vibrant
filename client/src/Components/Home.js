@@ -23,7 +23,7 @@ export default function Home() {
             <div className="font-weight-normal ">
               <h1 className="display-6 pt-3" style={{ fontWeight: "bolder" }}>
                 Lets Connect You To Events In Your{" "}
-                <span style={txt}>Location</span>. Find Intrested Event to{" "}
+                <span style={txt}>Location</span>. Find Interested Event to{" "}
                 <span style={txt}>Join</span>
               </h1>
             </div>
