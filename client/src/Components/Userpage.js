@@ -37,46 +37,28 @@ export default function Userpage({ user }) {
       setMine(searchedEvents);
     }
   }
+
+  function handleToggles(){
+    setToggleCreate(!toggleCreate);
+    setEditText(false);
+    setEventForm({
+      eventname: "",
+      fee: "",
+      location: "",
+      date: "",
+      slots: "",
+      details: "",
+      user_id: ""})
+  }
   return (
     <div>
       <h4 style={colorTxt} className=" px-5">
         Welcome {user.username.charAt(0).toUpperCase() + user.username.slice(1)}
       </h4>
-      <div class="row mx-4 d-flex justify-content-between ">
-        {/* <div class="col-sm-8">
-          {" "}
-          <li
-            onClick={() => setToggleCreate(!toggleCreate)}
-            type="button"
-            className="btn btn-lg"
-            style={{
-              border: "none",
-              color: "white",
-              backgroundColor: "#0D7CAC",
-              fontSize: "15px",
-              fontWeight: "300",
-            }}
-          >
-            {toggleCreate ? "View Your New Events" : "Create Event"}
-          </li>{" "}
-        </div> */}
-        {/* <div class="col-sm-4 ml-5">
-          {" "}
-          <input
-            onChange={(e) => searchHandle(e.target.value)}
-            type="search"
-            id="form1"
-            className="form-control"
-          />
-          <label className="" for="form1">
-            Search
-          </label>
-        </div> */}
-      </div>
       <div className="mx-5 mt-4 d-flex justify-content-between ">
         <div>
           <li
-            onClick={() => setToggleCreate(!toggleCreate)}
+            onClick={() => handleToggles()}
             type="button"
             className="btn btn-lg"
             style={{
@@ -91,7 +73,7 @@ export default function Userpage({ user }) {
           </li>
         </div>
 
-        <div className="">
+        <div className="w-25 ">
           <input
             onChange={(e) => searchHandle(e.target.value)}
             type="search"

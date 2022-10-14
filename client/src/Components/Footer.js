@@ -6,7 +6,7 @@ export default function Footer() {
     color: "black",
   };
   return (
-    <div className="bottom-0 pt-4 pb-2 footer" style={{ backgroundColor: "#0D7CAC" }}>
+    <footer className="bottom-0 pt-4 pb-2 h-auto" style={{ backgroundColor: "#0D7CAC" }}>
       <div className="container-fluid text-center ">
         <div className="row">
           <div className="col-md-4 col-xs-12">
@@ -34,6 +34,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
