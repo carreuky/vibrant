@@ -32116,3 +32116,11 @@ Processing by UsersController#show as */*
 Completed 200 OK in 24ms (Views: 12.3ms | ActiveRecord: 2.3ms | Allocations: 1853)
 
 
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-15 10:14:28 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-15 10:14:28 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
