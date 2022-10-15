@@ -9,9 +9,9 @@ export default function NewEvent({
   toggleCreate,
 }) {
   const [error, setError] = useState();
-  console.log(eventForm.id);
+  // console.log(eventForm.id);
   function handleChange(e) {
-    console.log(eventForm);
+    // console.log(eventForm);
     let name = e.target.name;
     let value = e.target.value;
 
@@ -20,6 +20,7 @@ export default function NewEvent({
       [name]: value,
     });
   }
+  // console.log(user_id)
 
   const errormessage = error?.map((error) => {
     return (
@@ -31,6 +32,8 @@ export default function NewEvent({
 
   function handleSubmitEvent(e) {
     e.preventDefault();
+
+    // console.log(eventForm)
 
     if (editText) {
       fetch(`events/${eventForm.id}`, {
@@ -49,7 +52,6 @@ export default function NewEvent({
             date: "",
             slots: "",
             details: "",
-            user_id: "",
           });
           setToggleCreate(!toggleCreate);
         } else {

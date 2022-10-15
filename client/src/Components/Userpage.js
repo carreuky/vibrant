@@ -7,7 +7,8 @@ export default function Userpage({ user }) {
   const [mine, setMine] = useState([]);
   const [mutated, setMutated] = useState([]);
   // const [notfound, setNotFound]=useState(FaBullseye)
-
+ 
+  // console.log(user.id)
   const [eventForm, setEventForm] = useState({
     eventname: "",
     fee: "",
@@ -17,6 +18,8 @@ export default function Userpage({ user }) {
     details: "",
     user_id: user.id,
   });
+
+  // console.log(eventForm)
   const [editText, setEditText] = useState(false);
 
   const colorTxt = {
@@ -38,7 +41,7 @@ export default function Userpage({ user }) {
     }
   }
 
-  function handleToggles(){
+  function handleToggles() {
     setToggleCreate(!toggleCreate);
     setEditText(false);
     setEventForm({
@@ -48,7 +51,8 @@ export default function Userpage({ user }) {
       date: "",
       slots: "",
       details: "",
-      user_id: ""})
+      user_id: user.id
+    });
   }
   return (
     <div>
