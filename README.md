@@ -35,12 +35,12 @@ Vibrant is an Event posting web application that allows organizers to post event
 
 
 
-Watch Demo [Drive Link]()
+<!-- Watch Demo [Drive Link]() -->
 
 ## Table of Content
 
 - [Vibrant](#vibrant)
-    - [By Kelvin Nderitu, 13/10/2022]()
+    - [By Kelvin Nderitu, 13/10/2022](#vibrant)
   - [Landing Page](#landing-page)
   - [Signup Page](#signup-page)
   - [Login Page](#login-page)
@@ -78,7 +78,7 @@ As an Organizer you should be able to:
 
 As User you should be able to:
 
-1. `Book / Reserve`  an event
+1. `Book / Reserve`  an event slot
 2. `View`  events
 
 
@@ -116,6 +116,9 @@ As User you should be able to:
 ### Live Link
 
 - [Vibrant live link](https://vibrant-e.herokuapp.com/)
+- [Events](https://vibrant-e.herokuapp.com/events)
+- [Users](https://vibrant-e.herokuapp.com/users)
+- [Attendees](https://vibrant-e.herokuapp.com/attendees)
   
 ****
 
@@ -123,7 +126,7 @@ As User you should be able to:
 
 - HTML -to develop the structure off the page
 
-- CSS - to style the User Interface
+- Boostrap  - to style the User Interface
 - Ruby on Rails - To build backend
 - Postgre SQL - To create Database
 - ReactJS - Building component based UI
@@ -153,7 +156,7 @@ License: MIT
 
 Feel free to reach out via:
 
-- Linked - [Kelvin Nderitu](https://www.linkedin.com/in/kelvin-nderitu-5845b3208/)
+- LinkedIn - [Kelvin Nderitu](https://www.linkedin.com/in/kelvin-nderitu-5845b3208/)
 
 [Go Back to the top](#Vibrant)
 ****

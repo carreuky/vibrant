@@ -6,6 +6,16 @@ def create
     render json:{success:'Successfully submitted.'}, status: :created
 end
 
+def index
+    attendee=Attendee.all
+    render json: attendee, status: :ok
+end
+
+def show
+    attendee=Attendee.find(params[:id])
+    render json: attendee, status: :ok
+end
+
 
 private
 def attendee_params
