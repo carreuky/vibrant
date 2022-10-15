@@ -42,7 +42,7 @@ export default function UserCardEvent({
   }
 
   return (
-    <div className="m-5">
+    <div className="m-4 ">
       {" "}
       {mine?.map((one) => {
         return (
@@ -79,7 +79,7 @@ export default function UserCardEvent({
               >
                 <p>Location: {one.location}</p>
                 <p>Date: {one.date}</p>
-                <p>Ksh {one.fee}/=</p>
+                <p>{one.fee === 0?'Entry Free':`Ksh ${one.fee}/=`}</p>
                 <p>Slots -- {one.slots}</p>
               </div>
             </div>

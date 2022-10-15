@@ -44,7 +44,7 @@ export default function NewEvent({
         body: JSON.stringify(eventForm),
       }).then((r) => {
         if (r.ok) {
-          r.json().then((event) =>(event));
+          r.json().then((event) => event);
           setEventForm({
             eventname: "",
             fee: "",
@@ -67,7 +67,7 @@ export default function NewEvent({
         body: JSON.stringify(eventForm),
       }).then((r) => {
         if (r.ok) {
-          r.json().then((event) =>event);
+          r.json().then((event) => event);
           setEventForm({
             eventname: "",
             fee: "",
