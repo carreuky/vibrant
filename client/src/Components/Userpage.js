@@ -19,6 +19,7 @@ export default function Userpage({ user }) {
     user_id: user.id,
   });
 
+  console.log(user.id)
   console.log(eventForm)
   const [editText, setEditText] = useState(false);
 

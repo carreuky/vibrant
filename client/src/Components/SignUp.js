@@ -23,7 +23,6 @@ export default function SignUp() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(userToDB);
 
     fetch("/signup", {
       method: "POST",
