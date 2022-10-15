@@ -75,7 +75,6 @@ export default function NewEvent({
             date: "",
             slots: "",
             details: "",
-            user_id: "",
           });
           setToggleCreate(!toggleCreate);
         } else {

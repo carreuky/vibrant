@@ -31938,3 +31938,181 @@ Processing by UsersController#show as */*
 Completed 200 OK in 18ms (Views: 9.1ms | ActiveRecord: 2.0ms | Allocations: 1861)
 
 
+Started GET "/me" for 127.0.0.1 at 2022-10-15 09:25:03 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+[active_model_serializers]   [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1[0m  [["user_id", 21]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered ShowUserEventsSerializer with ActiveModelSerializers::Adapter::Attributes (5.74ms)
+Completed 200 OK in 32ms (Views: 6.3ms | ActiveRecord: 10.2ms | Allocations: 4608)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-15 09:25:04 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+[active_model_serializers]   [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1[0m  [["user_id", 21]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered ShowUserEventsSerializer with ActiveModelSerializers::Adapter::Attributes (9.28ms)
+Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 1.0ms | Allocations: 1849)
+
+
+Started GET "/logo192.png" for 127.0.0.1 at 2022-10-15 09:25:04 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/logo192.png"):
+  
+Started DELETE "/events/47" for 127.0.0.1 at 2022-10-15 09:25:07 +0300
+Processing by EventsController#destroy as */*
+  Parameters: {"id"=>"47"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:27:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:28:in `destroy'
+  [1m[36mEvent Destroy (0.5ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 47]]
+  ↳ app/controllers/events_controller.rb:28:in `destroy'
+  [1m[36mTRANSACTION (953.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:28:in `destroy'
+Completed 204 No Content in 966ms (ActiveRecord: 955.3ms | Allocations: 1740)
+
+
+Started POST "/events" for 127.0.0.1 at 2022-10-15 09:25:38 +0300
+Processing by EventsController#create as */*
+  Parameters: {"eventname"=>"Good", "fee"=>"11", "location"=>"Ngong Road, Nairobi", "date"=>"2022-11-05", "slots"=>"8", "details"=>"Kujeni", "user_id"=>21, "event"=>{"eventname"=>"Good", "fee"=>"11", "location"=>"Ngong Road, Nairobi", "date"=>"2022-11-05", "slots"=>"8", "details"=>"Kujeni", "user_id"=>21}}
+[31mUnpermitted parameter: :event[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:16:in `create'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:16:in `create'
+  [1m[36mEvent Create (1.4ms)[0m  [1m[32mINSERT INTO "events" ("eventname", "fee", "location", "date", "slots", "details", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["eventname", "Good"], ["fee", 11], ["location", "Ngong Road, Nairobi"], ["date", "2022-11-05"], ["slots", 8], ["details", "Kujeni"], ["user_id", 21], ["created_at", "2022-10-15 06:25:38.771844"], ["updated_at", "2022-10-15 06:25:38.771844"]]
+  ↳ app/controllers/events_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (109.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:16:in `create'
+[active_model_serializers] Rendered EventSerializer with ActiveModelSerializers::Adapter::Attributes (1.16ms)
+Completed 200 OK in 136ms (Views: 2.7ms | ActiveRecord: 112.1ms | Allocations: 2922)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-15 09:25:38 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+[active_model_serializers]   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1[0m  [["user_id", 21]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered ShowUserEventsSerializer with ActiveModelSerializers::Adapter::Attributes (5.18ms)
+Completed 200 OK in 11ms (Views: 5.4ms | ActiveRecord: 1.3ms | Allocations: 1851)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-10-15 09:25:40 +0300
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 180)
+
+
+Started GET "/events" for 127.0.0.1 at 2022-10-15 09:25:42 +0300
+Processing by EventsController#index as */*
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/controllers/events_controller.rb:8:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.32ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.5ms | Allocations: 3426)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-10-15 09:58:31 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"koko", "password"=>"[FILTERED]", "session"=>{"username"=>"koko", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "koko"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.25ms)
+Completed 200 OK in 389ms (Views: 0.8ms | ActiveRecord: 7.2ms | Allocations: 3522)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-15 09:58:32 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+[active_model_serializers]   [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered ShowUserEventsSerializer with ActiveModelSerializers::Adapter::Attributes (5.29ms)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 1.1ms | Allocations: 2020)
+
+
+Started POST "/events" for 127.0.0.1 at 2022-10-15 09:59:15 +0300
+Processing by EventsController#create as */*
+  Parameters: {"eventname"=>"gf", "fee"=>"5", "location"=>"Nakuru", "date"=>"2022-10-29", "slots"=>"5", "details"=>"Kuja", "user_id"=>1, "event"=>{"eventname"=>"gf", "fee"=>"5", "location"=>"Nakuru", "date"=>"2022-10-29", "slots"=>"5", "details"=>"Kuja", "user_id"=>1}}
+[31mUnpermitted parameter: :event[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:16:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:16:in `create'
+  [1m[36mEvent Create (0.7ms)[0m  [1m[32mINSERT INTO "events" ("eventname", "fee", "location", "date", "slots", "details", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["eventname", "gf"], ["fee", 5], ["location", "Nakuru"], ["date", "2022-10-29"], ["slots", 5], ["details", "Kuja"], ["user_id", 1], ["created_at", "2022-10-15 06:59:15.473399"], ["updated_at", "2022-10-15 06:59:15.473399"]]
+  ↳ app/controllers/events_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (182.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:16:in `create'
+[active_model_serializers] Rendered EventSerializer with ActiveModelSerializers::Adapter::Attributes (1.16ms)
+Completed 200 OK in 198ms (Views: 2.8ms | ActiveRecord: 183.7ms | Allocations: 2917)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-15 09:59:15 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+[active_model_serializers]   [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered ShowUserEventsSerializer with ActiveModelSerializers::Adapter::Attributes (6.4ms)
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 0.9ms | Allocations: 2131)
+
+
+Started DELETE "/events/43" for 127.0.0.1 at 2022-10-15 09:59:42 +0300
+Processing by EventsController#destroy as */*
+  Parameters: {"id"=>"43"}
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:27:in `destroy'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:28:in `destroy'
+  [1m[36mEvent Destroy (1.1ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 43]]
+  ↳ app/controllers/events_controller.rb:28:in `destroy'
+  [1m[36mTRANSACTION (108.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:28:in `destroy'
+Completed 204 No Content in 134ms (ActiveRecord: 114.5ms | Allocations: 1737)
+
+
+Started DELETE "/events/44" for 127.0.0.1 at 2022-10-15 09:59:44 +0300
+Processing by EventsController#destroy as */*
+  Parameters: {"id"=>"44"}
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:27:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:28:in `destroy'
+  [1m[36mEvent Destroy (1.2ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 44]]
+  ↳ app/controllers/events_controller.rb:28:in `destroy'
+  [1m[36mTRANSACTION (117.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:28:in `destroy'
+Completed 204 No Content in 145ms (ActiveRecord: 120.2ms | Allocations: 1734)
+
+
+Started PATCH "/events/49" for 127.0.0.1 at 2022-10-15 09:59:53 +0300
+Processing by EventsController#update as */*
+  Parameters: {"id"=>"49", "eventname"=>"We do it ", "fee"=>5, "location"=>"Nakuru", "date"=>"2022-10-29", "slots"=>5, "details"=>"Kuja", "event"=>{"id"=>"49", "eventname"=>"We do it ", "fee"=>5, "location"=>"Nakuru", "date"=>"2022-10-29", "slots"=>5, "details"=>"Kuja"}}
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:21:in `update'
+[31mUnpermitted parameters: :id, :event[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/events_controller.rb:22:in `update'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:22:in `update'
+  [1m[36mEvent Update (1.3ms)[0m  [1m[33mUPDATE "events" SET "eventname" = $1, "updated_at" = $2 WHERE "events"."id" = $3[0m  [["eventname", "We do it "], ["updated_at", "2022-10-15 06:59:53.778186"], ["id", 49]]
+  ↳ app/controllers/events_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (109.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/events_controller.rb:22:in `update'
+[active_model_serializers] Rendered EventSerializer with ActiveModelSerializers::Adapter::Attributes (1.51ms)
+Completed 200 OK in 150ms (Views: 3.8ms | ActiveRecord: 113.6ms | Allocations: 3448)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-15 09:59:53 +0300
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+[active_model_serializers]   [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = $1[0m  [["user_id", 1]]
+[active_model_serializers]   ↳ app/controllers/users_controller.rb:16:in `show'
+[active_model_serializers] Rendered ShowUserEventsSerializer with ActiveModelSerializers::Adapter::Attributes (11.86ms)
+Completed 200 OK in 24ms (Views: 12.3ms | ActiveRecord: 2.3ms | Allocations: 1853)
+
+
